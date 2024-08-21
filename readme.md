@@ -20,4 +20,5 @@ Descarga aquí el código
 - Julieta Wunsche
 - Victor Augusto Verón 
 - Facundo Martinez
+- Tomas Herrero Santamarina 
 - Eugenia Sansierra 
