@@ -1,0 +1,23 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;  /* para bajar el footer de la pagina */
+}
+
+
+main {
+ flex-grow: 1;     /* para bajar el footer de la pagina */
+}
+
+.bannerNosotros{
+    height: 500px;
+    object-fit:cover;
+    opacity:25%; 
+  }
+
+@media (max-width: 767px) {
+    .h1Nosotros {
+      font-size: 1.5rem; /* Ajusta el tamaño del texto en móviles */
+    }
+  }
+
