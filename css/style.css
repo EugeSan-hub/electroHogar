@@ -15,6 +15,23 @@ main {
     opacity:25%; 
   }
 
+  .cardNosotros{
+    border: none;
+    max-width: 250px;
+    margin: auto;
+    background-color:#212529;
+  }
+  
+  .imgNosotros{
+    border-radius: 100%;
+    filter: grayscale(30%);
+  }
+    
+  .cardNosotros:hover{
+    color: rgb(39, 46, 146);
+    transition: all 3ms;
+  }
+
 @media (max-width: 767px) {
     .h1Nosotros {
       font-size: 1.5rem; /* Ajusta el tamaño del texto en móviles */
