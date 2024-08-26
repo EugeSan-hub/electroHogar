@@ -10,9 +10,9 @@ main {
 }
 
 .bannerNosotros{
-    height: 800px;
     object-fit:cover;
-    opacity:25%; 
+    height: 400px;
+       
   }
 
   .cardNosotros{
