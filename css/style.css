@@ -1,3 +1,30 @@
+
+main {
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.imagenCarousel {
+  height: 200px;
+  object-fit: cover;
+}
+
+@media all and (min-width: 992px) {
+  .imagenCarousel {
+    height: 400px;
+    object-fit: cover;
+    object-position: 50% 30%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .imagenCarousel {
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 30%;
+  }
+}
+=======
 *{
     margin:0;
     padding:0;
@@ -40,10 +67,7 @@ body{
     flex-direction: column;
 }
 
-main{
-    flex-grow: 1;
-  
-}
+
 
 .pagina-404-img{
    width:100% ; 
@@ -70,5 +94,6 @@ li a:hover{
     color: rgb(163, 161, 161);
     transition: 305ms;
 }
+
 
 
