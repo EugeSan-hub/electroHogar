@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
     <meta name="desription" content="Pagina de electrodomesticos" />
     <meta
       name="keywodes"
@@ -29,7 +28,7 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="#">ElectroHogar</a>
+          <a class="navbar-brand" href="">ElectroHogar</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -44,12 +43,15 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
+                <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -62,13 +64,46 @@
                   Productos
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Celulares</a></li>
-                  <li><a class="dropdown-item" href="#">Televisores</a></li>
-                  <li><a class="dropdown-item" href="#">Heladeras</a></li>
-                  <li><a class="dropdown-item" href="#">Computadoras</a></li>
+                  <li>
+                    <a class="dropdown-item" href="./pages/categoriaTv.html"
+                      >Televisores</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./pages/categoriaHeladeras.html"
+                      >Heladeras</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./pages/categoriaLavarropas.html"
+                      >Lavarropas</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./pages/categoriaCocinas.html"
+                      >Ccocinas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./pages/Error404.html"
+                      >Aires</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./pages/Error404.html"
+                      >Notebooks</a
+                    >
+                  </li>
                 </ul>
               </li>
             </ul>
+
             <div class="me-3">
               <a
                 class="btn btn-outline-info rounded-pill acceso-usuario"
@@ -177,37 +212,37 @@
       <section class="container-fluid my-4 py-3">
         <div class="row justify-content-around my-3">
           <article class="col-5 col-md-2 text-center">
-            <a href=""
+            <a href="./pages/categoriaTv.html"
               ><img src="./img/logoscategorias/tele.jpg" alt="Televisores"
             /></a>
             <p class="text-center"><span>Televisores</span></p>
           </article>
           <article class="col-5 col-md-2 text-center">
-            <a href=""
+            <a href="./pages/categoriaHeladeras.html"
               ><img src="./img/logoscategorias/heladera.jpg" alt="heladeras"
             /></a>
             <p class="text-center"><span>Heladeras</span></p>
           </article>
           <article class="col-5 col-md-2 text-center">
-            <a href=""
+            <a href="./pages/categoriaLavarropas.html"
               ><img src="./img/logoscategorias/lavarropas.jpg" alt="lavarropas"
             /></a>
             <p class="text-center"><span>Lavarropas</span></p>
           </article>
           <article class="col-5 col-md-2 text-center">
-            <a href=""
+            <a href="./pages/categoriaCocinas.html"
               ><img src="./img/logoscategorias/Cocinas.jpg" alt="Cocinas"
             /></a>
             <p class="text-center"><span>Cocinas</span></p>
           </article>
           <article class="col-5 col-md-2 text-center">
-            <a href=""
+            <a href="./pages/Error404.html"
               ><img src="./img/logoscategorias/aires.jpg" alt="aire"
             /></a>
             <p class="text-center"><span>Aires</span></p>
           </article>
           <article class="col-5 col-md-2 text-center">
-            <a href=""
+            <a href="./pages/Error404.html"
               ><img src="./img/logoscategorias/notebook.jpg" alt="notebook"
             /></a>
             <p class="text-center"><span>Notebooks</span></p>
@@ -246,7 +281,9 @@
             <h4 class="container-fluid ms-3 py-3 my-3">Productos mas vistos</h4>
             <section class="container-fluid mt-3">
               <div class="row justify-content-evenly">
-                <article class="col-5 col-md-2 border border-2 rounded-3 p-3 py-3 my-2">
+                <article
+                  class="col-5 col-md-2 border border-2 rounded-3 p-3 mt-3"
+                >
                   <a href=""
                     ><img
                       src="./img/facu/ps5.jpg"
@@ -261,7 +298,9 @@
                   </p>
                   <p class="fw-bold text-center">$1.299.999</p>
                 </article>
-                <article class="col-5 col-md-2 border border-2 rounded-3 p-3 my-2">
+                <article
+                  class="col-5 col-md-2 border border-2 rounded-3 p-3 mt-3"
+                >
                   <a href=""
                     ><img
                       src="./img/facu/tv43.jpg"
@@ -276,7 +315,9 @@
                   </p>
                   <p class="fw-bold text-center">$399.999</p>
                 </article>
-                <article class="col-5 col-md-2 border border-2 rounded-3 p-3 my-2">
+                <article
+                  class="col-5 col-md-2 border border-2 rounded-3 p-3 mt-3"
+                >
                   <a href=""
                     ><img
                       src="./img/facu/notebokk.jpg"
@@ -291,7 +332,9 @@
                   </p>
                   <p class="fw-bold text-center">$799.999</p>
                 </article>
-                <article class="col-5 col-md-2 border border-2 rounded-3 p-3 my-2">
+                <article
+                  class="col-5 col-md-2 border border-2 rounded-3 p-3 mt-3"
+                >
                   <a href=""
                     ><img
                       src="./img/facu/aireFrav.jpg"
@@ -471,19 +514,74 @@
         <article class="row justify-content-around">
           <div class="col-12 col-md-6 p-3">
             <section class="card rounded-3">
-              <a href=""><img src="./img/facu/amba.jpg" class="card-img-top h-100" alt="amba"></a>
+              <a href=""
+                ><img
+                  src="./img/facu/amba.jpg"
+                  class="card-img-top h-100"
+                  alt="amba"
+              /></a>
             </section>
           </div>
           <div class="col-12 col-md-6 p-3">
             <section class="card rounded-3">
-              <a href=""><img src="./img/facu/liqcalefaccion.jpg" class="card-img-top h-100" alt="liqcalefaccion"></a>
+              <a href=""
+                ><img
+                  src="./img/facu/liqcalefaccion.jpg"
+                  class="card-img-top h-100"
+                  alt="liqcalefaccion"
+              /></a>
             </section>
           </div>
         </article>
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="bg-dark text-light py-3 border-top text-center mt-3 py-2">
+      <section class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 pt-2">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-4">Acerca de ElectroHogar</li>
+              <li>QUIENES SOMOS</li>
+              <li>CARRERAS</li>
+              <li>NUESTRAS RESPONSABILIDADES</li>
+              <li>iNVERSIONISTAS</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 pt-2">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-4">Tiendas y Servicios</li>
+              <li>ENCUENTRA UNA TIENDA</li>
+              <li>DIRECTORIO DE TIENDAS</li>
+              <li>DIRECTORIO DE MARCAS</li>
+              <li>SERVICIO DE TIENDAS</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 pt-2">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-4">Servicio Al Cliente</li>
+              <li>PREGUNTAS FRECUENTES</li>
+              <li>REEMBOLSOS</li>
+              <li>DEVOLUCIONES Y CAMBIOS</li>
+              <li>RECIBO, ENVIO Y ENTREGA</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        class="container border-top mt-2 d-flex justify-content-center pt-3"
+      >
+        <div class="fs-1">
+          <a href="" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="" class="text-light"><i class="bi bi-instagram mx-2"></i></a>
+          <a href="" class="text-light"><i class="bi bi-whatsapp mx-2"></i></a>
+          <a href="" class="text-light"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </section>
+      <section class="border-top text-center mt-3 py-2 pt-4">
+        <h3 class="lead">@Todos los derechos reservados</h3>
+      </section>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
