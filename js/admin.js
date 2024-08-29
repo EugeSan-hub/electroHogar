@@ -7,6 +7,7 @@ import Producto from "./classProducto.js";
 const modalProducto = new bootstrap.Modal(document.getElementById("modalAdmi"));
 const btnNuevo = document.getElementById("btnNuevo");
 const crear = document.getElementById("Form");
+const tabla = document.querySelector("tbody");
 
 //traigo inputs del formulario
 const nombre = document.getElementById("nombre");
@@ -17,7 +18,8 @@ const precio = document.getElementById("precio");
 const imagen = document.getElementById("imagen");
 const categoria = document.getElementById("categoria");
 //crea el array
-const listaProductos = JSON.parse(localStorage.getItem('listaProductosKey')) || [];
+const listaProductos =
+  JSON.parse(localStorage.getItem("listaProductosKey")) || [];
 
 //funciones como abrir el modal desde js y no desde el data-bs-tarjet
 const MostrarModal = () => {
@@ -40,22 +42,51 @@ const crearProducto = (e) => {
   );
   //push del array al nuevo contacto
   listaProductos.push(nuevoProducto);
-  console.log(listaProductos)
+  console.log(listaProductos);
   limpiarFormulario();
   //Guardar en el LocalStorage
   guardarEnLocalStorage();
+  //Mostrar una fila agregada
+  dibujarFila(nuevoProducto);
 };
 
-const limpiarFormulario = ()=>{
+const limpiarFormulario = () => {
   crear.reset();
-}
+};
 
-const guardarEnLocalStorage = ()=>{
-  localStorage.setItem('ListaProductosKey', JSON.stringify(listaProductos));
-}
+const guardarEnLocalStorage = () => {
+  localStorage.setItem("ListaProductosKey", JSON.stringify(listaProductos));
+};
+
+const cargaInicial = () => {
+  if (listaProductos.length !== 0) {
+    listaProductos.map((productos) => dibujarFila(productos));
+  }
+};
+
+const dibujarFila = (productos) => {
+  tabla.innerHTML += `
+  <tr>
+                <th>${productos.id}</th>
+                <td>${productos.nombre}</td>
+                <td>${productos.descripcion}</td>
+                <td>${productos.marca}</td>
+                <td>${productos.cantidad}</td>
+                <td>${productos.precio}</td>
+                <td>${productos.categoria}</td>
+                <td>
+                  <button class="btn btn-primary">ver</button>
+                  <button class="btn btn-warning">editar</button>
+                  <button class="btn btn-danger">borrar</button>
+                </td>
+              </tr>
+  `;
+};
 
 //voy a tener un array de objetos productos, poner la linea del NEW en el boton submit y despues un array para guardar
 
 //logica crud
 btnNuevo.addEventListener("click", MostrarModal);
 crear.addEventListener("submit", crearProducto);
+
+cargaInicial();
