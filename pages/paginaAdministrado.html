@@ -149,6 +149,7 @@
                 <th>Marca</th>
                 <th>Cantidad</th>
                 <th>Precio</th>
+                <th>Categoria</th>
                 <th>Acciones</th>
               </tr>
             </thead>
@@ -160,6 +161,7 @@
                 <td>Samsung</td>
                 <td>1</td>
                 <td>200.000</td>
+                <td>Heladeras</td>
                 <td>
                   <button class="btn btn-primary">ver</button>
                   <button class="btn btn-warning">editar</button>
@@ -173,6 +175,7 @@
                 <td>Samsung</td>
                 <td>1</td>
                 <td>200.000</td>
+                <td>Heladeras</td>
                 <td>
                   <button class="btn btn-primary">ver</button>
                   <button class="btn btn-warning">editar</button>
@@ -186,6 +189,7 @@
                 <td>Samsung</td>
                 <td>1</td>
                 <td>200.000</td>
+                <td>Heladeras</td>
                 <td>
                   <button class="btn btn-primary">ver</button>
                   <button class="btn btn-warning">editar</button>
@@ -266,7 +270,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="Form">
               <div class="mb-3">
                 <label for="Nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre"/>
@@ -289,7 +293,11 @@
               </div>
               <div class="mb-3">
                 <label for="imagen" class="form-label">Imagen del producto</label>
-                <input type="number" class="form-control" id="imagen" />
+                <input type="text" class="form-control" id="imagen" />
+              </div>
+              <div class="mb-3">
+                <label for="Categoria" class="form-label">Categoria</label>
+                <input type="text" class="form-control" id="categoria" />
               </div>
               <button type="submit" class="btn btn-primary">Enviar</button>
             </form>

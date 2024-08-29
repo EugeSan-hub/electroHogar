@@ -1,20 +1,48 @@
-import Producto from "./classProducto";
+import Producto from "./classProducto.js";
 //logica del CRUD
 //necesito crear una clase, archivo por cada clase
 //aqui implemento en new, crea el objeto
 
-const producto = new Producto("heladera", "samsung", 2, 2000);
-console.log(producto);
-
+//variables
 const modalProducto = new bootstrap.Modal(document.getElementById("modalAdmi"));
 const btnNuevo = document.getElementById("btnNuevo");
+const crear = document.getElementById("Form");
 
+//traigo inputs del formulario
+const nombre = document.getElementById("nombre");
+const descripcion = document.getElementById("descripcion");
+const marca = document.getElementById("marca");
+const cantidad = document.getElementById("cantidad");
+const precio = document.getElementById("precio");
+const imagen = document.getElementById("imagen");
+const categoria = document.getElementById("categoria");
+//crea el array
 
-//funciones
-const MostrarModal = ()=> {
-    modalProducto.show();
-}
+//funciones como abrir el modal desde js y no desde el data-bs-tarjet
+const MostrarModal = () => {
+  modalProducto.show();
+};
 
+const crearProducto = (e) => {
+  e.preventDefault();
+  //julian hay q validar el form con un archivo js
+  //guardar objeto en array y guardar el array en el localstorage
+  //acceder al value y pasarlo al contacto usando los inputs
+  const nuevoProducto = new Producto(
+    nombre.value,
+    descripcion.value,
+    marca.value,
+    cantidad.value,
+    precio.value,
+    imagen.value,
+    categoria.value
+  );
+  console.log(nuevoProducto);
+  //push del array al nuevo contacto
+};
 
-//LOGICA EVENTOS ONCLICK
+//voy a tener un array de objetos productos, poner la linea del NEW en el boton submit y despues un array para guardar
+
+//logica crud
 btnNuevo.addEventListener("click", MostrarModal);
+crear.addEventListener("submit", crearProducto);
