@@ -38,7 +38,6 @@ const crearProducto = (e) => {
     imagen.value,
     categoria.value
   );
-  console.log(nuevoProducto);
   //push del array al nuevo contacto
   listaProductos.push(nuevoProducto);
   console.log(listaProductos)
