@@ -17,7 +17,7 @@ const precio = document.getElementById("precio");
 const imagen = document.getElementById("imagen");
 const categoria = document.getElementById("categoria");
 //crea el array
-const listaProductos = [];
+const listaProductos = JSON.parse(localStorage.getItem('listaProductosKey')) || [];
 
 //funciones como abrir el modal desde js y no desde el data-bs-tarjet
 const MostrarModal = () => {
@@ -43,10 +43,16 @@ const crearProducto = (e) => {
   listaProductos.push(nuevoProducto);
   console.log(listaProductos)
   limpiarFormulario();
+  //Guardar en el LocalStorage
+  guardarEnLocalStorage();
 };
 
 const limpiarFormulario = ()=>{
   crear.reset();
+}
+
+const guardarEnLocalStorage = ()=>{
+  localStorage.setItem('ListaProductosKey', JSON.stringify(listaProductos));
 }
 
 //voy a tener un array de objetos productos, poner la linea del NEW en el boton submit y despues un array para guardar

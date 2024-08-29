@@ -81,4 +81,17 @@ export default class Producto {
   get precio() {
     return this.#categoria;
   }
+
+  toJSON(){
+    return{
+      id: this.id,
+      nombre: this.nombre,
+      descripcion: this.descripcion,
+      marca: this.marca,
+      cantidad: this.cantidad,
+      precio: this.precio,
+      imagen: this.imagen,
+      categoria: this.categoria
+    }
+  }
 }
