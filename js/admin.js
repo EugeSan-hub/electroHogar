@@ -17,6 +17,7 @@ const precio = document.getElementById("precio");
 const imagen = document.getElementById("imagen");
 const categoria = document.getElementById("categoria");
 //crea el array
+const listaProductos = [];
 
 //funciones como abrir el modal desde js y no desde el data-bs-tarjet
 const MostrarModal = () => {
@@ -39,7 +40,8 @@ const crearProducto = (e) => {
   );
   console.log(nuevoProducto);
   //push del array al nuevo contacto
-
+  listaProductos.push(nuevoProducto);
+  console.log(listaProductos)
   limpiarFormulario();
 };
 
