@@ -78,7 +78,7 @@ export default class Producto {
     this.#categoria = value;
   }
 
-  get precio() {
+  get categoria() {
     return this.#categoria;
   }
 

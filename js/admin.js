@@ -19,7 +19,7 @@ const imagen = document.getElementById("imagen");
 const categoria = document.getElementById("categoria");
 //crea el array
 const listaProductos =
-  JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+  JSON.parse(localStorage.getItem("ListaProductosKey")) || [];
 
 //funciones como abrir el modal desde js y no desde el data-bs-tarjet
 const MostrarModal = () => {
@@ -65,11 +65,10 @@ const cargaInicial = () => {
   }
 };
 
-
 //esta funcion muestra el producto que se agrego
 const dibujarFila = (productos) => {
   tabla.innerHTML += `
-  <tr>
+              <tr>
                 <th>${productos.id}</th>
                 <td>${productos.nombre}</td>
                 <td>${productos.descripcion}</td>
