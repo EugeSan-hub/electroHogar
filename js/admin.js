@@ -58,12 +58,15 @@ const guardarEnLocalStorage = () => {
   localStorage.setItem("ListaProductosKey", JSON.stringify(listaProductos));
 };
 
+//en teoria con esto me tendria que mostrar lo que tengo guardado en el local storage, pero no me esta mostrando
 const cargaInicial = () => {
   if (listaProductos.length !== 0) {
     listaProductos.map((productos) => dibujarFila(productos));
   }
 };
 
+
+//esta funcion muestra el producto que se agrego
 const dibujarFila = (productos) => {
   tabla.innerHTML += `
   <tr>
