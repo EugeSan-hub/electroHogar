@@ -134,8 +134,6 @@
           <h4>Tabla de Productos</h4>
           <button
             class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#modalAdmi"
             id="btnNuevo"
           >
             Agregar Nuevo Producto
@@ -151,49 +149,11 @@
                 <th>Marca</th>
                 <th>Cantidad</th>
                 <th>Precio</th>
+                <th>Categoria</th>
                 <th>Acciones</th>
               </tr>
             </thead>
             <tbody class="table-group-divider">
-              <tr>
-                <th>01</th>
-                <td>Heladera</td>
-                <td>2 puertas</td>
-                <td>Samsung</td>
-                <td>1</td>
-                <td>200.000</td>
-                <td>
-                  <button class="btn btn-primary">ver</button>
-                  <button class="btn btn-warning">editar</button>
-                  <button class="btn btn-danger">borrar</button>
-                </td>
-              </tr>
-              <tr>
-                <th>01</th>
-                <td>Heladera</td>
-                <td>2 puertas</td>
-                <td>Samsung</td>
-                <td>1</td>
-                <td>200.000</td>
-                <td>
-                  <button class="btn btn-primary">ver</button>
-                  <button class="btn btn-warning">editar</button>
-                  <button class="btn btn-danger">borrar</button>
-                </td>
-              </tr>
-              <tr>
-                <th>01</th>
-                <td>Heladera</td>
-                <td>2 puertas</td>
-                <td>Samsung</td>
-                <td>1</td>
-                <td>200.000</td>
-                <td>
-                  <button class="btn btn-primary">ver</button>
-                  <button class="btn btn-warning">editar</button>
-                  <button class="btn btn-danger">borrar</button>
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -268,26 +228,35 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="Form">
               <div class="mb-3">
                 <label for="Nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="Nombre" />
+                <input type="text" class="form-control" id="nombre"/>
               </div>
               <div class="mb-3">
                 <label for="Descripcion" class="form-label">Descripcion</label>
-                <input type="text" class="form-control" id="Descripcion" />
+                <input type="text" class="form-control" id="descripcion" />
               </div>
               <div class="mb-3">
                 <label for="Marca" class="form-label">Marca</label>
-                <input type="text" class="form-control" id="Marca" />
+                <input type="text" class="form-control" id="marca" />
               </div>
               <div class="mb-3">
                 <label for="Cantidad" class="form-label">Cantidad</label>
-                <input type="number" class="form-control" id="Cantidad" />
+                <input type="number" class="form-control" id="cantidad" />
               </div>
               <div class="mb-3">
-                <label for="price" class="form-label">Precio</label>
-                <input type="number" class="form-control" id="price" />
+                <label for="Precio" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="precio" />
+              </div>
+              <div class="mb-3">
+                <label for="imagen" class="form-label">Imagen del producto</label>
+                <input type="text" class="form-control" id="imagen" />
+                <img src="" alt="">
+              </div>
+              <div class="mb-3">
+                <label for="Categoria" class="form-label">Categoria</label>
+                <input type="text" class="form-control" id="categoria" />
               </div>
               <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
