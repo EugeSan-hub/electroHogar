@@ -39,7 +39,13 @@ const crearProducto = (e) => {
   );
   console.log(nuevoProducto);
   //push del array al nuevo contacto
+
+  limpiarFormulario();
 };
+
+const limpiarFormulario = ()=>{
+  crear.reset();
+}
 
 //voy a tener un array de objetos productos, poner la linea del NEW en el boton submit y despues un array para guardar
 
