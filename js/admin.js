@@ -21,7 +21,7 @@ const categoria = document.getElementById("categoria");
 const listaProductos =
   JSON.parse(localStorage.getItem("ListaProductosKey")) || [];
 
-//funciones como abrir el modal desde js y no desde el data-bs-tarjet
+//funciones como abrir el modal desde js y no desde el data-bs-toggle
 const MostrarModal = () => {
   modalProducto.show();
 };
