@@ -77,7 +77,7 @@ const dibujarFila = (productos) => {
                 <td>${productos.precio}</td>
                 <td>${productos.categoria}</td>
                 <td>
-                  <button class="btn btn-primary">ver</button>
+                  <button class="btn btn-primary" onclick="verDetalle('${Producto.id}')">ver</button>
                   <button class="btn btn-warning">editar</button>
                   <button class="btn btn-danger">borrar</button>
                 </td>
@@ -92,3 +92,9 @@ btnNuevo.addEventListener("click", MostrarModal);
 crear.addEventListener("submit", crearProducto);
 
 cargaInicial();
+
+// funcion ver para redireccionar pagina cocina 
+
+window.verDetalle = (id) => {
+  window.location.href = "/pages/categoriaCocinas.html?id=" + id;
+};
