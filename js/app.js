@@ -6,7 +6,7 @@ const listaProductos = JSON.parse(localStorage.getItem("ListaProductosKey")) || 
 const contenedorCards = document.querySelector('#contenedorCard');
 
 // Iterar sobre todos los productos y crear una tarjeta para cada uno
-listaProductos.forEach(producto => {
+listaProductos.find(producto => {
   contenedorCards.innerHTML += `
           
         <div class="col-sm-12 col-md-6 col-lg-3 ">
