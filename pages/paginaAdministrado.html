@@ -231,23 +231,23 @@
             <form id="Form">
               <div class="mb-3">
                 <label for="Nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre"/>
+                <input type="text" class="form-control" id="nombre" minlength="3" maxlength="50" required/>
               </div>
               <div class="mb-3">
                 <label for="Descripcion" class="form-label">Descripcion</label>
-                <input type="text" class="form-control" id="descripcion" />
+                <input type="text" class="form-control" id="descripcion"  minlength="3" maxlength="200" required />
               </div>
               <div class="mb-3">
                 <label for="Marca" class="form-label">Marca</label>
-                <input type="text" class="form-control" id="marca" />
+                <input type="text" class="form-control" id="marca" minlength="3" maxlength="50" required />
               </div>
               <div class="mb-3">
                 <label for="Cantidad" class="form-label">Cantidad</label>
-                <input type="number" class="form-control" id="cantidad" />
+                <input type="number" class="form-control" id="cantidad" min="0" max="20" required />
               </div>
               <div class="mb-3">
                 <label for="Precio" class="form-label">Precio</label>
-                <input type="number" class="form-control" id="precio" />
+                <input type="number" class="form-control" id="precio" min="0" required/>
               </div>
               <div class="mb-3">
                 <label for="imagen" class="form-label">Imagen del producto</label>
