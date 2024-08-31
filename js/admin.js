@@ -47,7 +47,7 @@ const limpiarFormulario = () => {
 };
 
 const guardarEnLocalStorage = () => {
-  localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos));
+  localStorage.setItem("ListaProductosKey", JSON.stringify(listaProductos));
 };
 
 function cargaInicial() {
@@ -69,13 +69,40 @@ const dibujarFila = (productos) => {
                 <td>
                   <button class="btn btn-primary">ver</button>
                   <button class="btn btn-warning">editar</button>
-                  <button class="btn btn-danger"onclick="borrarProducto()">Borrar</button>
+                  <button class="btn btn-danger"onclick="borrarProducto('${productos.id}')">Borrar</button>
                 </td>
-              </tr>`
+              </tr>`;
 };
 
-window.borrarProducto = () => {
-  console.log("hola");
+window.borrarProducto = (id) => {
+  console.log(id);
+  Swal.fire({
+    title: "¿Estas seguro de eliminar este producto?",
+    text: "Este proceso no puede revertirse",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#000080",
+    confirmButtonText: "Eliminar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const posicionProductoBuscado = listaProductos.findIndex(
+        (productos) => productos.id === id
+      );
+      console.log(posicionProductoBuscado);
+      listaProductos.splice(posicionProductoBuscado, 1);
+      guardarEnLocalStorage();
+      //4- actualizar la tabla
+      tabla.removeChild(tabla.children[posicionProductoBuscado])
+   
+      Swal.fire({
+        title: "Producto eliminado!",
+        text: "El producto fue eliminado exitosamente.",
+        icon: "success",
+      });
+    }
+  });
 };
 
 //logica crud
