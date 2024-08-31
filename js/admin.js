@@ -96,5 +96,5 @@ cargaInicial();
 // funcion ver para redireccionar pagina cocina 
 
 window.verDetalle = (id) => {
-  window.location.href = "/pages/categoriaCocinas.html?id=" + id;
+  window.location.href = "/index.html?id=" + id;
 };

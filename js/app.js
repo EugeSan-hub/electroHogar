@@ -9,11 +9,11 @@ const contenedorCards = document.querySelector('#contenedorCard');
 listaProductos.forEach(producto => {
   contenedorCards.innerHTML += `
           
-        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
-          <div class="card h-100 mb-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card mt-4">
             <img
               src="${producto.imagen}"
-              class="card-img-top img-fluid"
+              class="card-img-top "
               alt="${producto.nombre}"
             />
             <div class="card-body shadow">
