@@ -93,7 +93,7 @@ window.borrarProducto = (id) => {
       console.log(posicionProductoBuscado);
       listaProductos.splice(posicionProductoBuscado, 1);
       guardarEnLocalStorage();
-      //4- actualizar la tabla
+      
       tabla.removeChild(tabla.children[posicionProductoBuscado])
    
       Swal.fire({
