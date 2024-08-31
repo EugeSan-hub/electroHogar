@@ -77,7 +77,7 @@ const dibujarFila = (productos) => {
                 <td>${productos.precio}</td>
                 <td>${productos.categoria}</td>
                 <td>
-                  <button class="btn btn-primary" onclick="verDetalle('${productos.id}')">ver</button>
+                  <button class="btn btn-primary" onclick="verDetalle('${productos.categoria}')">ver</button>
                   <button class="btn btn-warning">editar</button>
                   <button class="btn btn-danger">borrar</button>
                 </td>
@@ -95,6 +95,23 @@ cargaInicial();
 
 // funcion ver para redireccionar pagina cocina 
 
-window.verDetalle = (id) => {
-  window.location.href = "/pages/categoriaCocinas.html?id=" + id;
+window.verDetalle = (categoria) => {
+  let url = "";
+
+  switch (categoria.toLowerCase()) {
+    case "heladeras":
+      url = "/pages/categoriaHeladeras.html?categoria=" + categoria;
+      break;
+    case "cocinas":
+      url = "/pages/categoriaCocinas.html?categoria=" + categoria;
+      break;
+    case "tvs":
+      url = "/pages/categoriaTv.html?categoria=" + categoria;
+      break;
+    // Agrega más categorías según sea necesario
+    default:
+      console.error("Categoría no válida");
+      return;
+  }
+  window.location.href = url;
 };

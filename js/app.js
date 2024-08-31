@@ -1,71 +1,30 @@
-// // para el index
+// Extraer el parámetro de la URL
+const parametroCategoria = new URLSearchParams(window.location.search).get('categoria');
+console.log("Parámetro categoria:", parametroCategoria);
 
-
-// // extraer el parametro de la url
-// const  parametroId = new URLSearchParams(window.location.search).get('id')
-
-// // buscar el id en el local storag
-// const listaProductos =
-//   JSON.parse(localStorage.getItem("ListaProductosKey")) || [];
-// // dibujar el objeto en la card
-
-
-// const productoBuscado = listaProductos.find((elemento) => elemento.id === parametroId);
-// console.log(productoBuscado);
-
-// const card = document.querySelector('#contenedorCard');
-// card.innerHTML = `<article class="container pb-3">
-//                 <div class="row d-flex">
-//               <div class="col-sm-12 col-md-4 col-lg-4">
-//                 <div class="card mb-3">
-//                   <img
-//                     src= ${productoBuscado.imagen}
-//                      class="card-img-top img-fluid"
-//                     alt="${productoBuscado.nombre}"
-//                   />
-//                   <div class="card-body shadow">
-//                     <h5 class="card-title">${productoBuscado.nombre}</h5>
-//                     <p class="card-text">
-//                     ${productoBuscado.descripcion}
-//                     </p>
-//                     <p>
-//                     $${productoBuscado.precio}
-//                     </p>
-//                     <button class="btn btn-outline-info text-center">Ver Detalle</button>
-//                   </div>
-//                 </div>
-//               </div>`
-
-// SE HIZO DIBUJAR CADA OBJETO IGRESADO PERO HABRIA QUE CAMBIAR EL ROW Y PONERLO EN LA SECCION HTML PARA QUE NO SE DIBUJE DEBAJO
-// Obtener la lista de productos desde localStorage
+// Obtener la lista de productos del LocalStorage
 const listaProductos = JSON.parse(localStorage.getItem("ListaProductosKey")) || [];
+console.log(listaProductos);
+console.log("Productos en LocalStorage:", listaProductos);
 
-// Seleccionar el contenedor donde se dibujarán las tarjetas
-const contenedorCards = document.querySelector('#contenedorCard');
+// Buscar el producto que coincide con la categoría en la URL
+const productosFiltrados = listaProductos.filter((producto) => producto.categoria === parametroCategoria);
+console.log("Productos Filtrados:", productosFiltrados);
 
-// Iterar sobre todos los productos y crear una tarjeta para cada uno
-listaProductos.forEach(producto => {
-  contenedorCards.innerHTML += `
-          
-        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
-          <div class="card h-100 mb-3">
-            <img
-              src="${producto.imagen}"
-              class="card-img-top img-fluid"
-              alt="${producto.nombre}"
-            />
-            <div class="card-body shadow">
-              <h5 class="card-title">${producto.nombre}</h5>
-              <p class="card-text">
-                ${producto.descripcion}
-              </p>
-              <p>
-                $${producto.precio}
-              </p>
-              <button class="btn btn-outline-info text-center">Ver Detalle</button>
-            </div>
-            </div>
-      </div>
-   
-  `;
-});
+// Referencia al contenedor donde se mostrarán los productos
+const seccionPadre = document.getElementById('#contenedorCard');
+
+// Verificar si se encontraron productos
+  productosFiltrados.find((productoBuscado) => {
+    // Dibujar el producto en el contenedor
+    seccionPadre.innerHTML += `
+      <article class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3">
+        <a href="./categoriaCocinas.html">
+          <img src="${productoBuscado.imagen}" alt="${productoBuscado.marca}" class="img-fluid rounded-2"/>
+        </a>
+        <p class="text-center mt-3 py-2">
+          <span>${productoBuscado.nombre}<br />${productoBuscado.descripcion}</span>
+        </p>
+        <p class="fw-bold text-center">${productoBuscado.precio}</p>
+      </article>`;
+  });
