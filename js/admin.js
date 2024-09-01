@@ -93,7 +93,7 @@ crear.addEventListener("submit", crearProducto);
 
 cargaInicial();
 
-// funcion ver para redireccionar pagina cocina 
+// funcion ver para redireccionar pagina cocina
 
 window.verDetalle = (categoria) => {
   let url = "";
@@ -105,10 +105,16 @@ window.verDetalle = (categoria) => {
     case "cocinas":
       url = "/pages/categoriaCocinas.html?categoria=" + categoria;
       break;
-    case "tvs":
+    case "tv":
       url = "/pages/categoriaTv.html?categoria=" + categoria;
       break;
-    // Agrega más categorías según sea necesario
+    case "lavarropas":
+      url = "/pages/categoriaLavarropas.html?categoria=" + categoria;
+      break;
+    case "index":
+      url = "/index.html?categoria=" + categoria;
+    break;
+
     default:
       console.error("Categoría no válida");
       return;

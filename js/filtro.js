@@ -19,10 +19,10 @@ const cargaInicial = () => {
     seccionPadre.innerHTML += `
           <article class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3">
             <a href="./categoriaCocinas.html">
-              <img src="${producto.imagen}" alt="${producto.marca}" class="img-fluid rounded-2"/>
+              <img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid rounded-2"/>
             </a>
             <p class="text-center mt-3 py-2">
-              <span>${producto.nombre}<br />${producto.descripcion}</span>
+              <span>${producto.marca}<br />${producto.descripcion}</span>
             </p>
             <p class="fw-bold text-center">${producto.precio}</p>
           </article>`;
@@ -56,10 +56,10 @@ const actualizarVistaProductos = () => {
       seccionPadre.innerHTML += `
           <article class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3">
             <a href="./categoriaCocinas.html">
-              <img src="${producto.imagen}" alt="${producto.marca}" class="img-fluid rounded-2"/>
+              <img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid rounded-2"/>
             </a>
             <p class="text-center mt-3 py-2">
-              <span>${producto.nombre}<br />${producto.descripcion}</span>
+              <span>${producto.marca}<br />${producto.descripcion}</span>
             </p>
             <p class="fw-bold text-center">${producto.precio}</p>
           </article>`;
