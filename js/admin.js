@@ -77,7 +77,7 @@ const dibujarFila = (productos) => {
                 <td>${productos.precio}</td>
                 <td>${productos.categoria}</td>
                 <td>
-                  <button class="btn btn-primary">ver</button>
+                  <button class="btn btn-primary" onclick="verDetalle('${productos.categoria}')">ver</button>
                   <button class="btn btn-warning">editar</button>
                   <button class="btn btn-danger">borrar</button>
                 </td>
@@ -92,3 +92,32 @@ btnNuevo.addEventListener("click", MostrarModal);
 crear.addEventListener("submit", crearProducto);
 
 cargaInicial();
+
+// funcion ver para redireccionar pagina cocina
+
+window.verDetalle = (categoria) => {
+  let url = "";
+
+  switch (categoria.toLowerCase()) {
+    case "heladeras":
+      url = "/pages/categoriaHeladeras.html?categoria=" + categoria;
+      break;
+    case "cocinas":
+      url = "/pages/categoriaCocinas.html?categoria=" + categoria;
+      break;
+    case "tv":
+      url = "/pages/categoriaTv.html?categoria=" + categoria;
+      break;
+    case "lavarropas":
+      url = "/pages/categoriaLavarropas.html?categoria=" + categoria;
+      break;
+    case "index":
+      url = "/index.html?categoria=" + categoria;
+    break;
+
+    default:
+      console.error("Categoría no válida");
+      return;
+  }
+  window.location.href = url;
+};

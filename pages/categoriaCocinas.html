@@ -89,18 +89,16 @@
     <main class="bg-primary-subtle">
       <section class="container-fluid py-5 mb-4">
         <h2 class="text-center py-3">Categoria de Cocinas</h2>
+        <article class="container py-3 my-3">
+          <a href=""
+            ><img
+              src="../img/categoriasHeladeras/banners-interior.png"
+              alt="banner"
+              class="img-fluid"
+            />
+          </a>
+        </article>
       </section>
-
-      <article class="container py-3 my-3">
-        <a href=""
-          ><img
-            src="../img/categoriasHeladeras/banners-interior.png"
-            alt="banner"
-            class="img-fluid"
-          />
-        </a>
-      </article>
-
       <section class="container-fluid py-4 my-4">
         <div class="row">
           <section class="col-12 col-md-3 ps-md-4 my-3 py-3">
@@ -114,8 +112,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
+                    value="Orbis"
+                    id="checkOrbis"
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     Orbis
@@ -125,8 +123,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
+                    value="Escorial"
+                    id="checkEscorial"
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     Escorial
@@ -136,8 +134,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
+                    value="Whirlpool"
+                    id="checkWhirlpool"
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     Whirlpool
@@ -147,8 +145,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
+                    value="Volcan"
+                    id="checkVolcan"
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     Volcan
@@ -158,17 +156,17 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
+                    value="Philco"
+                    id="checkPhilco"
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     Philco
                   </label>
                 </div>
-               
+
                 <p><a href="">Ver mas</a></p>
               </article>
-            
+
               <article class="col-3 col-md-12 py-2 my-2">
                 <h5>Tipo</h5>
                 <div class="form-check">
@@ -234,11 +232,15 @@
           </section>
 
           <section
-            class="container container-md-fluid col-10 col-md-9 my-3 py-3"
+            class="container container-md-fluid col-10 col-md-8 mx-3 py-3"
           >
-            <div class="row justify-content-center justify-content-md-evenly">
+            <section
+              class="row justify-content-center justify-content-md-evenly"
+              id="contenedorCard"
+            >
               <article
                 class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+                id="contenedorCard"
               >
                 <a href="./categoriaCocinas.html"
                   ><img
@@ -334,8 +336,8 @@
                 <p class="text-center mx-2 my-3 py-2">
                   <span
                     >Cocina Volcan 87644v 4 Hornallas <br />
-                   Blanca Multigas GN/glp </span
-                  >
+                    Blanca Multigas GN/glp
+                  </span>
                 </p>
                 <p class="fw-bold text-center">$548.000</p>
               </article>
@@ -385,8 +387,8 @@
                 <p class="text-center mx-2 my-3 py-2">
                   <span
                     >Cocina WhirlpoolWFX57DI con<br />
-                    puerta con visor color inox </span
-                  >
+                    puerta con visor color inox
+                  </span>
                 </p>
                 <p class="fw-bold text-center">$918.092</p>
               </article>
@@ -407,7 +409,7 @@
                 </p>
                 <p class="fw-bold text-center">$1.121.926</p>
               </article>
-            </div>
+            </section>
           </section>
         </div>
       </section>
@@ -416,8 +418,8 @@
     <footer class="bg-dark text-light py-3 border-top text-center mt-3 py-2">
       <section class="container">
         <div class="row">
-          <div class="col-12 col-md-4 pt-2 ">
-            <ul class="text-center pe-4 list-unstyled ">
+          <div class="col-12 col-md-4 pt-2">
+            <ul class="text-center pe-4 list-unstyled">
               <li class="fs-4">Acerca de ElectroHogar</li>
               <li>QUIENES SOMOS</li>
               <li>CARRERAS</li>
@@ -425,7 +427,7 @@
               <li>iNVERSIONISTAS</li>
             </ul>
           </div>
-          <div class="col-12 col-md-4 pt-2 ">
+          <div class="col-12 col-md-4 pt-2">
             <ul class="text-center pe-4 list-unstyled">
               <li class="fs-4">Tiendas y Servicios</li>
               <li>ENCUENTRA UNA TIENDA</li>
@@ -434,7 +436,7 @@
               <li>SERVICIO DE TIENDAS</li>
             </ul>
           </div>
-          <div class="col-12 col-md-4 pt-2 ">
+          <div class="col-12 col-md-4 pt-2">
             <ul class="text-center pe-4 list-unstyled">
               <li class="fs-4">Servicio Al Cliente</li>
               <li>PREGUNTAS FRECUENTES</li>
@@ -445,14 +447,16 @@
           </div>
         </div>
       </section>
-      <section class="container border-top mt-2 d-flex justify-content-center pt-3">
-          <div class="fs-1">
-            <a href="" class="text-light"><i class="bi bi-facebook"></i></a>
-            <a href="" class="text-light"><i class="bi bi-instagram mx-2"></i></a>
-            <a href="" class="text-light"><i class="bi bi-whatsapp mx-2"></i></a>
-            </i>
-            <a href="" class="text-light"><i class="bi bi-twitter-x"></i></a>
-          </div>
+      <section
+        class="container border-top mt-2 d-flex justify-content-center pt-3"
+      >
+        <div class="fs-1">
+          <a href="" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="" class="text-light"><i class="bi bi-instagram mx-2"></i></a>
+          <a href="" class="text-light"><i class="bi bi-whatsapp mx-2"></i></a>
+
+          <a href="" class="text-light"><i class="bi bi-twitter-x"></i></a>
+        </div>
       </section>
       <section class="border-top text-center mt-3 py-2 pt-4">
         <h3 class="lead">@Todos los derechos reservados</h3>
@@ -463,5 +467,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/filtro.js"></script>
   </body>
 </html>
