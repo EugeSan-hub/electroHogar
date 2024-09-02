@@ -28,3 +28,8 @@ const seccionPadre = document.getElementById('#contenedorCard');
         <p class="fw-bold text-center">${productoBuscado.precio}</p>
       </article>`;
   });
+
+
+  const busqueda = Document.getElementById("busqueda");
+
+  const busquedad = listaProductos.filter((producto) = {const productosBuscado = listaProductos.filter((producto) => producto.categoria === parametroCategoria)} );
