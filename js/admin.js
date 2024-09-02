@@ -77,6 +77,8 @@ const modificarProducto = ()=>{
 
   guardarEnLocalStorage();
   limpiarFormulario();
+  tabla.innerHTML = ``;
+  cargaInicial();
 }
 
 const administrarProducto = (e)=>{
@@ -102,6 +104,10 @@ const cargaInicial = () => {
     listaProductos.map((productos) => dibujarFila(productos));
   }
 };
+
+// const limpiarTabla = (productos)=>{
+//   tabla.innerHTML = 
+// }
 
 //esta funcion muestra el producto que se agrego
 const dibujarFila = (productos) => {
