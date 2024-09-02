@@ -32,8 +32,7 @@ const MostrarModal = () => {
 
 //Debo validar
 
-const crearProducto = (e) => {
-  e.preventDefault();
+const crearProducto = () => {
   estoyCreando = true;
   
   //validar form
@@ -128,10 +127,6 @@ const cargaInicial = () => {
   }
 };
 
-// const limpiarTabla = (productos)=>{
-//   tabla.innerHTML = 
-// }
-
 //esta funcion muestra el producto que se agrego
 const dibujarFila = (productos) => {
   tabla.innerHTML += `
@@ -146,7 +141,7 @@ const dibujarFila = (productos) => {
                 <td>
                 
                   <button class="btn btn-primary" onclick="verDetalle('${productos.categoria}')">ver</button>
-                  <button class="btn btn-warning" onclick="prepararEditarProducto('${productos.id}'">editar</button>
+                  <button class="btn btn-warning" onclick="prepararEditarProducto('${productos.id}')">editar</button>
                   <button class="btn btn-danger">borrar</button>
                 </td>
               </tr>
