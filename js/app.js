@@ -47,8 +47,11 @@ if (parametroId) {
               <i class="bi bi-patch-check-fill text-primary"></i>
             </h6>
             <h3 class="text-light">$${productoEncontrado.precio}</h3><h5 class="text-light mt-3">${productoEncontrado.descripcion}</h5>
+        
+            <p class ="text-ligth">12 cuotas sin interés de $65.833,25</p>
+
            <div>
-             <a href="../pages/Error404.html" class=" mt-5 btn btn-primary btn-lg fw-light">Comprar</a>
+             <a href="../pages/Error404.html" class=" mt-1 btn btn-primary btn-lg fw-light">Comprar</a>
            </div>
          </div>
         </div>`;
