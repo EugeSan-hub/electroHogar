@@ -18,6 +18,7 @@ const cantidad = document.getElementById("cantidad");
 const precio = document.getElementById("precio");
 const imagen = document.getElementById("imagen");
 const categoria = document.getElementById("categoria");
+let estoyCreando = true;
 //crea el array
 const listaProductos =
   JSON.parse(localStorage.getItem("ListaProductosKey")) || [];
@@ -33,6 +34,8 @@ const MostrarModal = () => {
 
 const crearProducto = (e) => {
   e.preventDefault();
+  estoyCreando = true;
+  
   //validar form
   if (
     validarCaracteres(nombre, 3, 30) &&
@@ -67,6 +70,45 @@ const crearProducto = (e) => {
   //acceder al value y pasarlo al contacto usando los inputs
 };
 
+window.prepararEditarProducto = (id)=>{
+  estoyCreando = false;
+  MostrarModal();
+  const encontrarProductos = listaProductos.find((producto) => producto.id === id)
+  if(encontrarProductos){
+    nombre.value = encontrarProductos.nombre;
+    descripcion.value = encontrarProductos.descripcion;
+    marca.value = encontrarProductos.marca;
+    cantidad.value = encontrarProductos.cantidad;
+    precio.value = encontrarProductos.precio;
+    imagen.value = encontrarProductos.imagen;
+    categoria.value = encontrarProductos.categoria;
+  }
+}
+
+const modificarProducto = ()=>{
+  listaProductos[0].nombre = nombre.value;
+  listaProductos[0].descripcion = descripcion.value;
+  listaProductos[0].marca = marca.value;
+  listaProductos[0].cantidad = cantidad.value;
+  listaProductos[0].precio = precio.value;
+  listaProductos[0].imagen = imagen.value;
+  listaProductos[0].categoria = categoria.value;
+
+  guardarEnLocalStorage();
+  limpiarFormulario();
+  tabla.innerHTML = ``;
+  cargaInicial();
+}
+
+const administrarProducto = (e)=>{
+  e.preventDefault();
+  if(estoyCreando){
+    crearProducto();
+  }else{
+    modificarProducto();
+  }
+}
+
 const limpiarFormulario = () => {
   crear.reset();
   const inputs = document.querySelectorAll('.form-control');
@@ -86,6 +128,10 @@ const cargaInicial = () => {
   }
 };
 
+// const limpiarTabla = (productos)=>{
+//   tabla.innerHTML = 
+// }
+
 //esta funcion muestra el producto que se agrego
 const dibujarFila = (productos) => {
   tabla.innerHTML += `
@@ -98,8 +144,9 @@ const dibujarFila = (productos) => {
                 <td>${productos.precio}</td>
                 <td>${productos.categoria}</td>
                 <td>
+                
                   <button class="btn btn-primary" onclick="verDetalle('${productos.categoria}')">ver</button>
-                  <button class="btn btn-warning">editar</button>
+                  <button class="btn btn-warning" onclick="prepararEditarProducto('${productos.id}'">editar</button>
                   <button class="btn btn-danger">borrar</button>
                 </td>
               </tr>
@@ -110,7 +157,7 @@ const dibujarFila = (productos) => {
 
 //logica crud
 btnNuevo.addEventListener("click", MostrarModal);
-crear.addEventListener("submit", crearProducto);
+crear.addEventListener("submit", administrarProducto);
 
 cargaInicial();
 
