@@ -1,4 +1,5 @@
 import Producto from "./classProducto.js";
+import { validarCaracteres, validarNumber } from "./validaciones.js";
 //logica del CRUD
 //necesito crear una clase, archivo por cada clase
 //aqui implemento en new, crea el objeto
@@ -27,28 +28,46 @@ const MostrarModal = () => {
   modalProducto.show();
 };
 
-const crearProducto = () => {
+//para validar
+
+//Debo validar
+
+const crearProducto = (e) => {
+  e.preventDefault();
   estoyCreando = true;
+  
+  //validar form
+  if (
+    validarCaracteres(nombre, 3, 30) &&
+    validarCaracteres(descripcion, 3, 30) &&
+    validarCaracteres(marca, 3, 30) &&
+    validarCaracteres(categoria, 3, 30) &&
+    validarNumber(cantidad, 1, 30) &&
+    validarNumber(precio, 1, Infinity)
+  ) {
+    const nuevoProducto = new Producto(
+      nombre.value,
+      descripcion.value,
+      marca.value,
+      cantidad.value,
+      precio.value,
+      imagen.value,
+      categoria.value
+    );
+    //push del array al nuevo contacto
+    listaProductos.push(nuevoProducto);
+    console.log(listaProductos);
+    limpiarFormulario();
+    //Guardar en el LocalStorage
+    guardarEnLocalStorage();
+    //Mostrar una fila agregada
+    dibujarFila(nuevoProducto);
+  } else {
+    return false;
+  }
   //julian hay q validar el form con un archivo js
   //guardar objeto en array y guardar el array en el localstorage
   //acceder al value y pasarlo al contacto usando los inputs
-  const nuevoProducto = new Producto(
-    nombre.value,
-    descripcion.value,
-    marca.value,
-    cantidad.value,
-    precio.value,
-    imagen.value,
-    categoria.value
-  );
-  //push del array al nuevo contacto
-  listaProductos.push(nuevoProducto);
-  console.log(listaProductos);
-  limpiarFormulario();
-  //Guardar en el LocalStorage
-  guardarEnLocalStorage();
-  //Mostrar una fila agregada
-  dibujarFila(nuevoProducto);
 };
 
 window.prepararEditarProducto = (id)=>{
@@ -92,6 +111,10 @@ const administrarProducto = (e)=>{
 
 const limpiarFormulario = () => {
   crear.reset();
+  const inputs = document.querySelectorAll('.form-control');
+  inputs.forEach(input => {
+    input.classList.remove('is-valid', 'is-invalid');
+  });
 };
 
 const guardarEnLocalStorage = () => {
@@ -121,8 +144,9 @@ const dibujarFila = (productos) => {
                 <td>${productos.precio}</td>
                 <td>${productos.categoria}</td>
                 <td>
-                  <button class="btn btn-primary">ver</button>
-                  <button class="btn btn-warning"  onclick="prepararEditarProducto('${productos.id}')">editar</button>
+                
+                  <button class="btn btn-primary" onclick="verDetalle('${productos.categoria}')">ver</button>
+                  <button class="btn btn-warning" onclick="prepararEditarProducto('${productos.id}'">editar</button>
                   <button class="btn btn-danger">borrar</button>
                 </td>
               </tr>
@@ -136,3 +160,32 @@ btnNuevo.addEventListener("click", MostrarModal);
 crear.addEventListener("submit", administrarProducto);
 
 cargaInicial();
+
+// funcion ver para redireccionar pagina cocina
+
+window.verDetalle = (categoria) => {
+  let url = "";
+
+  switch (categoria.toLowerCase()) {
+    case "heladeras":
+      url = "/pages/categoriaHeladeras.html?categoria=" + categoria;
+      break;
+    case "cocinas":
+      url = "/pages/categoriaCocinas.html?categoria=" + categoria;
+      break;
+    case "tv":
+      url = "/pages/categoriaTv.html?categoria=" + categoria;
+      break;
+    case "lavarropas":
+      url = "/pages/categoriaLavarropas.html?categoria=" + categoria;
+      break;
+    case "index":
+      url = "/index.html?categoria=" + categoria;
+      break;
+
+    default:
+      console.error("Categoría no válida");
+      return;
+  }
+  window.location.href = url;
+};
