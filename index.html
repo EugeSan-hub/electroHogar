@@ -108,12 +108,15 @@
                 </ul>
               </li>
             </ul>
-
-            <div class="me-3">
+            <form class="d-flex mx-5" role="search">
+              <input class="form-control me-2 mx-3" type="search" placeholder="Buscar Producto" aria-label="Search">
+              <button class="btn btn-outline-success " type="submit" id="busqueda"><i class="bi bi-search"></i></button>
+            </form>
+            <div class="">
               <a
-                class="btn btn-outline-info rounded-pill acceso-usuario"
+                class="btn btn-outline-info rounded-pill acceso-usuario "
                 href="./pages/login.html"
-              >
+                 >
                 <i class="bi bi-person"></i>
                 <span>Iniciar Sesion</span>
               </a>
@@ -280,6 +283,7 @@
         </article>
       </section>
 
+
       <section class="ms-5">
         <div class="container">
           <h4 class="mb-4 text-center">PRODUCTOS MAS VISTOS</h4>
@@ -365,6 +369,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/app.js" type="module"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/filtro.js" type="module"></script>
   </body>
 </html>

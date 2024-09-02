@@ -1,4 +1,5 @@
 
+
 // SE HIZO DIBUJAR CADA OBJETO IGRESADO PERO HABRIA QUE CAMBIAR EL ROW Y PONERLO EN LA SECCION HTML PARA QUE NO SE DIBUJE DEBAJO
 // Obtener la lista de productos desde localStorage
 const listaProductos = JSON.parse(localStorage.getItem("ListaProductosKey")) || [];
