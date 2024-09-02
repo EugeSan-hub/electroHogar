@@ -3,14 +3,11 @@ import { validarCaracteres, validarNumber } from "./validaciones.js";
 //logica del CRUD
 //necesito crear una clase, archivo por cada clase
 //aqui implemento en new, crea el objeto
-
-//variables
 const modalProducto = new bootstrap.Modal(document.getElementById("modalAdmi"));
 const btnNuevo = document.getElementById("btnNuevo");
 const crear = document.getElementById("Form");
 const tabla = document.querySelector("tbody");
 
-//traigo inputs del formulario
 const nombre = document.getElementById("nombre");
 const descripcion = document.getElementById("descripcion");
 const marca = document.getElementById("marca");
@@ -18,6 +15,7 @@ const cantidad = document.getElementById("cantidad");
 const precio = document.getElementById("precio");
 const imagen = document.getElementById("imagen");
 const categoria = document.getElementById("categoria");
+
 let estoyCreando = true;
 //crea el array
 const listaProductos =
@@ -27,7 +25,6 @@ const listaProductos =
 const MostrarModal = () => {
   modalProducto.show();
 };
-
 //para validar
 
 //Debo validar
@@ -120,14 +117,12 @@ const guardarEnLocalStorage = () => {
   localStorage.setItem("ListaProductosKey", JSON.stringify(listaProductos));
 };
 
-//en teoria con esto me tendria que mostrar lo que tengo guardado en el local storage, pero no me esta mostrando
-const cargaInicial = () => {
+function cargaInicial() {
   if (listaProductos.length !== 0) {
     listaProductos.map((productos) => dibujarFila(productos));
   }
-};
+}
 
-//esta funcion muestra el producto que se agrego
 const dibujarFila = (productos) => {
   tabla.innerHTML += `
               <tr>
@@ -142,13 +137,41 @@ const dibujarFila = (productos) => {
                 
                   <button class="btn btn-primary" onclick="verDetalle('${productos.categoria}')">ver</button>
                   <button class="btn btn-warning" onclick="prepararEditarProducto('${productos.id}')">editar</button>
-                  <button class="btn btn-danger">borrar</button>
+                  <button class="btn btn-danger"  onclick="borrarProducto('${productos.id}')">borrar</button>
                 </td>
-              </tr>
-  `;
+              </tr>`;
 };
 
-//voy a tener un array de objetos productos, poner la linea del NEW en el boton submit y despues un array para guardar
+window.borrarProducto = (id) => {
+  console.log(id);
+  Swal.fire({
+    title: "¿Estas seguro de eliminar este producto?",
+    text: "Este proceso no puede revertirse",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#000080",
+    confirmButtonText: "Eliminar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const posicionProductoBuscado = listaProductos.findIndex(
+        (productos) => productos.id === id
+      );
+      console.log(posicionProductoBuscado);
+      listaProductos.splice(posicionProductoBuscado, 1);
+      guardarEnLocalStorage();
+      
+      tabla.removeChild(tabla.children[posicionProductoBuscado])
+   
+      Swal.fire({
+        title: "Producto eliminado!",
+        text: "El producto fue eliminado exitosamente.",
+        icon: "success",
+      });
+    }
+  });
+};
 
 //logica crud
 btnNuevo.addEventListener("click", MostrarModal);
