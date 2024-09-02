@@ -17,23 +17,18 @@ const productosCategorias = listaProductos.filter(
 const cargaInicial = () => {
   if (seccionIndex) {
     productosCategorias.slice(0,4).map((producto) => {
-      // Dibujar el producto en el contenedor
       seccionIndex.innerHTML += `
-      <article class="col-5 col-md-2 border border-2 rounded-3 p-3 my-2">
-      <a href=""
-        ><img
-          src="${producto.imagen}"
-          alt="${producto.nombre}"
-          class="img-fluid rounded-2"
-      /></a>
-      <p class="text-center mt-3 py-2">
-        <span
-          >${producto.marca}<br />
-          ${producto.descripcion}</span
-        >
-      </p>
-      <p class="fw-bold text-center">${producto.precio}</p>
-    </article>`;
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card mt-4">
+            <img src="${producto.imagen}" class="card-img-top " alt="${producto.nombre}" />
+            <div class="card-body shadow">
+              <h5 class="card-title">${producto.nombre}</h5>
+              <h5 class="card-text">${producto.descripcion}</h5>
+              <h6>$${producto.precio}</h6>
+              <button class="btn btn-outline-info text-center" onclick="verPagDetalle('${producto.id}')">Ver Detalle</button>
+            </div>
+          </div>
+        </div>`;
     });
   } else {
     productosCategorias.map((producto) => {

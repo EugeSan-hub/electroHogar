@@ -1,32 +1,3 @@
-
-
-// SE HIZO DIBUJAR CADA OBJETO IGRESADO PERO HABRIA QUE CAMBIAR EL ROW Y PONERLO EN LA SECCION HTML PARA QUE NO SE DIBUJE DEBAJO
-// Obtener la lista de productos desde localStorage
-const listaProductos = JSON.parse(localStorage.getItem("ListaProductosKey")) || [];
-
-// Seleccionar el contenedor donde se dibujarán las tarjetas
-const contenedorCards = document.querySelector("#contenedorCard");
-window.verDetalle = (id) => {
-  window.location.href = "/electroHogar/index.html?id=" + id;
-};
-if (contenedorCards) {
-  // Iterar sobre todos los productos y crear una tarjeta para cada uno
-  listaProductos.forEach((producto) => {
-    contenedorCards.innerHTML += `
-      <div class="col-sm-12 col-md-6 col-lg-3 ">
-        <div class="card mt-4">
-          <img src="${producto.imagen}" class="card-img-top " alt="${producto.nombre}" />
-          <div class="card-body shadow">
-            <h5 class="card-title">${producto.nombre}</h5>
-            <h5 class="card-text">${producto.descripcion}</h5>
-            <h6>$${producto.precio}</h6>
-            <button class="btn btn-outline-info text-center" onclick="verPagDetalle('${producto.id}')">Ver Detalle</button>
-          </div>
-        </div>
-      </div>`;
-  });
-}
-
 window.verPagDetalle = (id) => {
   window.location.href = "/pages/detallesProductos.html?id=" + id;
 };
