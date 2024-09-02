@@ -1,4 +1,5 @@
 import Producto from "./classProducto.js";
+import { validarCaracteres, validarNumber } from "./validaciones.js";
 //logica del CRUD
 //necesito crear una clase, archivo por cada clase
 //aqui implemento en new, crea el objeto
@@ -26,32 +27,52 @@ const MostrarModal = () => {
   modalProducto.show();
 };
 
+//para validar
+
+//Debo validar
+
 const crearProducto = (e) => {
   e.preventDefault();
+  //validar form
+  if (
+    validarCaracteres(nombre, 3, 30) &&
+    validarCaracteres(descripcion, 3, 30) &&
+    validarCaracteres(marca, 3, 30) &&
+    validarCaracteres(categoria, 3, 30) &&
+    validarNumber(cantidad, 1, 30) &&
+    validarNumber(precio, 1, Infinity)
+  ) {
+    const nuevoProducto = new Producto(
+      nombre.value,
+      descripcion.value,
+      marca.value,
+      cantidad.value,
+      precio.value,
+      imagen.value,
+      categoria.value
+    );
+    //push del array al nuevo contacto
+    listaProductos.push(nuevoProducto);
+    console.log(listaProductos);
+    limpiarFormulario();
+    //Guardar en el LocalStorage
+    guardarEnLocalStorage();
+    //Mostrar una fila agregada
+    dibujarFila(nuevoProducto);
+  } else {
+    return false;
+  }
   //julian hay q validar el form con un archivo js
   //guardar objeto en array y guardar el array en el localstorage
   //acceder al value y pasarlo al contacto usando los inputs
-  const nuevoProducto = new Producto(
-    nombre.value,
-    descripcion.value,
-    marca.value,
-    cantidad.value,
-    precio.value,
-    imagen.value,
-    categoria.value
-  );
-  //push del array al nuevo contacto
-  listaProductos.push(nuevoProducto);
-  console.log(listaProductos);
-  limpiarFormulario();
-  //Guardar en el LocalStorage
-  guardarEnLocalStorage();
-  //Mostrar una fila agregada
-  dibujarFila(nuevoProducto);
 };
 
 const limpiarFormulario = () => {
   crear.reset();
+  const inputs = document.querySelectorAll('.form-control');
+  inputs.forEach(input => {
+    input.classList.remove('is-valid', 'is-invalid');
+  });
 };
 
 const guardarEnLocalStorage = () => {
@@ -113,7 +134,7 @@ window.verDetalle = (categoria) => {
       break;
     case "index":
       url = "/index.html?categoria=" + categoria;
-    break;
+      break;
 
     default:
       console.error("Categoría no válida");

@@ -3,30 +3,53 @@ const listaProductos =
 
 // Extraer el parámetro de la URL
 const parametroCategoria = new URLSearchParams(window.location.search).get(
-    "categoria"
-  );
-  
+  "categoria"
+);
+
 // Referencia al contenedor donde se mostrarán los productos
 const seccionPadre = document.getElementById("contenedorCard");
+const seccionIndex = document.getElementById("contenedorIndex");
 
 const productosCategorias = listaProductos.filter(
-    (producto) => producto.categoria === parametroCategoria
-  );
+  (producto) => producto.categoria === parametroCategoria
+);
 
 const cargaInicial = () => {
-  productosCategorias.map((producto) => {
-    // Dibujar el producto en el contenedor
-    seccionPadre.innerHTML += `
-          <article class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3">
-            <a href="./categoriaCocinas.html">
-              <img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid rounded-2"/>
-            </a>
-            <p class="text-center mt-3 py-2">
-              <span>${producto.marca}<br />${producto.descripcion}</span>
-            </p>
-            <p class="fw-bold text-center">${producto.precio}</p>
-          </article>`;
-  });
+  if (seccionIndex) {
+    productosCategorias.slice(0,4).map((producto) => {
+      // Dibujar el producto en el contenedor
+      seccionIndex.innerHTML += `
+      <article class="col-5 col-md-2 border border-2 rounded-3 p-3 my-2">
+      <a href=""
+        ><img
+          src="${producto.imagen}"
+          alt="${producto.nombre}"
+          class="img-fluid rounded-2"
+      /></a>
+      <p class="text-center mt-3 py-2">
+        <span
+          >${producto.marca}<br />
+          ${producto.descripcion}</span
+        >
+      </p>
+      <p class="fw-bold text-center">${producto.precio}</p>
+    </article>`;
+    });
+  } else {
+    productosCategorias.map((producto) => {
+      // Dibujar el producto en el contenedor
+      seccionPadre.innerHTML += `
+            <article class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3">
+              <a href="./categoriaCocinas.html">
+                <img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid rounded-2"/>
+              </a>
+              <p class="text-center mt-3 py-2">
+                <span>${producto.marca}<br />${producto.descripcion}</span>
+              </p>
+              <p class="fw-bold text-center">${producto.precio}</p>
+            </article>`;
+    });
+  }
 };
 
 cargaInicial();

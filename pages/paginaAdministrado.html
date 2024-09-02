@@ -113,7 +113,9 @@
             <div class="me-3">
               <a
                 class="btn btn-outline-info rounded-pill acceso-usuario"
-                href="./pages/login.html" data-bs-toggle="modal" data-bs-target="#modalIniciarSesion"
+                href="./pages/login.html"
+                data-bs-toggle="modal"
+                data-bs-target="#modalIniciarSesion"
               >
                 <i class="bi bi-person"></i>
                 <span>Iniciar Sesion</span>
@@ -155,32 +157,6 @@
         </div>
       </section>
     </main>
-    <div class="modal" id="modalIniciarSesion" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title fs-3 fw-bold">Iniciar  Sesión</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form id="formUsuario">
-              <div class="mb-3">
-                <label for="nombreUsuario" class="form-label fs-5 fw-light">Usuario</label>
-                <input type="text" class="form-control fs-6 fst-italic" id="nombreUsuario" minlength="3" maxlength="30" placeholder="Nombre de Usuario" required />
-              </div>
-              <div class="mb-3">
-                <label for="contraseña" class="form-label fs-5 fw-light">Contraseña</label>
-                <input type="password" class="form-control fs-6 fst-italic" minlength="3" 
-                maxlength="12" id="contraseña" placeholder="Ingrese su contraseña" required />
-              </div>
-          </div>
-          <div class="modal-footer">
-            <a href="../pages/Error404.html">¿Olvidaste tu contraseña?</a>
-            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <footer class="bg-dark text-light py-3 border-top text-center mt-3 py-2">
       <section class="container">
@@ -257,10 +233,13 @@
                   type="text"
                   class="form-control"
                   id="nombre"
-                  minlength="3"
-                  maxlength="50"
-                  required
                 />
+                <div class="invalid-feedback">
+                  El nombre es obligatorio, ingrese entre 2 y 30 caracteres.
+                </div>
+                <div class="valid-feedback">
+                  Datos correctos
+                </div>
               </div>
               <div class="mb-3">
                 <label for="Descripcion" class="form-label">Descripcion</label>
@@ -268,10 +247,13 @@
                   type="text"
                   class="form-control"
                   id="descripcion"
-                  minlength="3"
-                  maxlength="200"
-                  required
                 />
+                <div class="invalid-feedback">
+                  La descripcion es obligatoria, ingrese entre 2 y 30 caracteres.
+                </div>
+                <div class="valid-feedback">
+                  Datos correctos
+                </div>
               </div>
               <div class="mb-3">
                 <label for="Marca" class="form-label">Marca</label>
@@ -279,10 +261,13 @@
                   type="text"
                   class="form-control"
                   id="marca"
-                  minlength="3"
-                  maxlength="50"
-                  required
                 />
+                <div class="invalid-feedback">
+                  La marca es obligatoria, ingrese entre 2 y 30 caracteres.
+                </div>
+                <div class="valid-feedback">
+                  Datos correctos
+                </div>
               </div>
               <div class="mb-3">
                 <label for="Cantidad" class="form-label">Cantidad</label>
@@ -290,27 +275,33 @@
                   type="number"
                   class="form-control"
                   id="cantidad"
-                  min="0"
-                  max="20"
-                  required
                 />
+                <div class="invalid-feedback">
+                  La cantidad es obligatoria y debe ser mayor a 1.
+                </div>
+                <div class="valid-feedback">
+                  Datos correctos.
+                </div>
               </div>
               <div class="mb-3">
                 <label for="Precio" class="form-label">Precio</label>
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
                   id="precio"
-                  min="0"
-                  required
                 />
+                <div class="invalid-feedback">
+                  El precio es obligatorio y debe ser mayor a 1.
+                </div>
+                <div class="valid-feedback">
+                  Datos correctos.
+                </div>
               </div>
               <div class="mb-3">
                 <label for="imagen" class="form-label"
                   >Imagen del producto</label
                 >
                 <input type="text" class="form-control" id="imagen" />
-                <img src="" alt="" />
               </div>
               <div class="mb-3">
                 <label for="Categoria" class="form-label">Categoria</label>
@@ -318,10 +309,13 @@
                   type="text"
                   class="form-control"
                   id="categoria"
-                  minlength="3"
-                  maxlength="50"
-                  required
                 />
+                <div class="invalid-feedback">
+                  La categoria es obligatoria, ingrese entre 2 y 30 caracteres
+                </div>
+                <div class="valid-feedback">
+                  Datos correctos
+                </div>
               </div>
               <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
@@ -336,5 +330,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/admin.js" type="module"></script>
+    <script src="../js/validaciones.js"></script>
   </body>
 </html>
