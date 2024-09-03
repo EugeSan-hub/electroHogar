@@ -31,7 +31,7 @@ const MostrarModal = () => {
 
 const crearProducto = () => {
   estoyCreando = true;
-  
+
   //validar form
   if (
     validarCaracteres(nombre, 3, 30) &&
@@ -66,50 +66,57 @@ const crearProducto = () => {
   //acceder al value y pasarlo al contacto usando los inputs
 };
 
-window.prepararEditarProducto = (id)=>{
+let indiceProductoEditar = null; // Variable global para almacenar el índice del producto a editar
+
+window.prepararEditarProducto = (id) => {
   estoyCreando = false;
   MostrarModal();
-  const encontrarProductos = listaProductos.find((producto) => producto.id === id)
-  if(encontrarProductos){
-    nombre.value = encontrarProductos.nombre;
-    descripcion.value = encontrarProductos.descripcion;
-    marca.value = encontrarProductos.marca;
-    cantidad.value = encontrarProductos.cantidad;
-    precio.value = encontrarProductos.precio;
-    imagen.value = encontrarProductos.imagen;
-    categoria.value = encontrarProductos.categoria;
+  indiceProductoEditar = listaProductos.findIndex(
+    (producto) => producto.id === id
+  );
+  const productoAEditar = listaProductos[indiceProductoEditar];
+  if (productoAEditar) {
+    nombre.value = productoAEditar.nombre;
+    descripcion.value = productoAEditar.descripcion;
+    marca.value = productoAEditar.marca;
+    cantidad.value = productoAEditar.cantidad;
+    precio.value = productoAEditar.precio;
+    imagen.value = productoAEditar.imagen;
+    categoria.value = productoAEditar.categoria;
   }
-}
+};
 
-const modificarProducto = ()=>{
-  listaProductos[0].nombre = nombre.value;
-  listaProductos[0].descripcion = descripcion.value;
-  listaProductos[0].marca = marca.value;
-  listaProductos[0].cantidad = cantidad.value;
-  listaProductos[0].precio = precio.value;
-  listaProductos[0].imagen = imagen.value;
-  listaProductos[0].categoria = categoria.value;
+const modificarProducto = () => {
+  if (indiceProductoEditar !== null) {
+    listaProductos[indiceProductoEditar].nombre = nombre.value;
+    listaProductos[indiceProductoEditar].descripcion = descripcion.value;
+    listaProductos[indiceProductoEditar].marca = marca.value;
+    listaProductos[indiceProductoEditar].cantidad = cantidad.value;
+    listaProductos[indiceProductoEditar].precio = precio.value;
+    listaProductos[indiceProductoEditar].imagen = imagen.value;
+    listaProductos[indiceProductoEditar].categoria = categoria.value;
 
-  guardarEnLocalStorage();
-  limpiarFormulario();
-  tabla.innerHTML = ``;
-  cargaInicial();
-}
+    guardarEnLocalStorage();
+    limpiarFormulario();
+    tabla.innerHTML = ``; // Limpia la tabla antes de volver a cargarla
+    cargaInicial(); // Recarga la tabla para reflejar los cambios
+  }
+};
 
-const administrarProducto = (e)=>{
+const administrarProducto = (e) => {
   e.preventDefault();
-  if(estoyCreando){
+  if (estoyCreando) {
     crearProducto();
-  }else{
+  } else {
     modificarProducto();
   }
-}
+};
 
 const limpiarFormulario = () => {
   crear.reset();
-  const inputs = document.querySelectorAll('.form-control');
-  inputs.forEach(input => {
-    input.classList.remove('is-valid', 'is-invalid');
+  const inputs = document.querySelectorAll(".form-control");
+  inputs.forEach((input) => {
+    input.classList.remove("is-valid", "is-invalid");
   });
 };
 
@@ -134,10 +141,9 @@ const dibujarFila = (productos) => {
                 <td>${productos.precio}</td>
                 <td>${productos.categoria}</td>
                 <td>
-                
-                  <button class="btn btn-primary" onclick="verDetalle('${productos.categoria}')">ver</button>
-                  <button class="btn btn-warning" onclick="prepararEditarProducto('${productos.id}')">editar</button>
-                  <button class="btn btn-danger"  onclick="borrarProducto('${productos.id}')">borrar</button>
+                  <button class="btn btn-primary" onclick="verDetalle('${productos.categoria}')">Ver</button>
+                  <button class="btn btn-warning" onclick="prepararEditarProducto('${productos.id}')">Editar</button>
+                  <button class="btn btn-danger"  onclick="borrarProducto('${productos.id}')">Borrar</button>
                 </td>
               </tr>`;
 };
@@ -161,9 +167,9 @@ window.borrarProducto = (id) => {
       console.log(posicionProductoBuscado);
       listaProductos.splice(posicionProductoBuscado, 1);
       guardarEnLocalStorage();
-      
-      tabla.removeChild(tabla.children[posicionProductoBuscado])
-   
+
+      tabla.removeChild(tabla.children[posicionProductoBuscado]);
+
       Swal.fire({
         title: "Producto eliminado!",
         text: "El producto fue eliminado exitosamente.",
@@ -200,7 +206,6 @@ window.verDetalle = (categoria) => {
     case "index":
       url = "/index.html?categoria=" + categoria;
       break;
-
     default:
       console.error("Categoría no válida");
       return;
