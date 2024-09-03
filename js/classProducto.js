@@ -73,7 +73,7 @@ export default class Producto {
   get imagen() {
     return this.#imagen;
   }
-  
+
   set categoria(value) {
     this.#categoria = value;
   }
@@ -82,8 +82,8 @@ export default class Producto {
     return this.#categoria;
   }
 
-  toJSON(){
-    return{
+  toJSON() {
+    return {
       id: this.id,
       nombre: this.nombre,
       descripcion: this.descripcion,
@@ -91,7 +91,7 @@ export default class Producto {
       cantidad: this.cantidad,
       precio: this.precio,
       imagen: this.imagen,
-      categoria: this.categoria
-    }
+      categoria: this.categoria,
+    };
   }
 }

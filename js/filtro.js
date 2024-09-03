@@ -1,12 +1,10 @@
 const listaProductos =
   JSON.parse(localStorage.getItem("ListaProductosKey")) || [];
 
-// Extraer el parámetro de la URL
 const parametroCategoria = new URLSearchParams(window.location.search).get(
   "categoria"
 );
 
-// Referencia al contenedor donde se mostrarán los productos
 const seccionPadre = document.getElementById("contenedorCard");
 const seccionIndex = document.getElementById("contenedorIndex");
 
@@ -32,7 +30,6 @@ const cargaInicial = () => {
     });
   } else {
     productosCategorias.map((producto) => {
-      // Dibujar el producto en el contenedor
       seccionPadre.innerHTML += `
             <article class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3">
               <a href="./categoriaCocinas.html">
@@ -70,7 +67,6 @@ const actualizarVistaProductos = () => {
 
   if (productosFiltrados.length > 0) {
     productosFiltrados.map((producto) => {
-      // Dibujar el producto en el contenedor
       seccionPadre.innerHTML += `
           <article class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3">
             <a href="./categoriaCocinas.html">
@@ -87,7 +83,6 @@ const actualizarVistaProductos = () => {
   }
 };
 
-// Agregar eventos a los checkboxes
 document.querySelectorAll(".form-check-input").forEach((checkbox) => {
   checkbox.addEventListener("change", actualizarVistaProductos);
 });

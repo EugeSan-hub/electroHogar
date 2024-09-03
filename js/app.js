@@ -1,14 +1,15 @@
 window.verPagDetalle = (id) => {
   window.location.href = "/pages/detallesProductos.html?id=" + id;
 };
-const parametroId = new URLSearchParams(window.location.search).get('id')
+const parametroId = new URLSearchParams(window.location.search).get("id");
 const contenedorDetalle = document.querySelector("#detalleProducto");
-console.log (parametroId)
+console.log(parametroId);
 if (parametroId) {
-    const productoEncontrado = listaProductos.find ((producto)=>
-    producto.id === parametroId)
-    console.log(productoEncontrado)
-    contenedorDetalle.innerHTML = `
+  const productoEncontrado = listaProductos.find(
+    (producto) => producto.id === parametroId
+  );
+  console.log(productoEncontrado);
+  contenedorDetalle.innerHTML = `
         <div class="row">
           <div class="col-sm-12 col-md-6 col-xl-8">
             <img src="${productoEncontrado.imagen}" alt="${productoEncontrado.nombre}" class="img-fluid" />
@@ -28,4 +29,4 @@ if (parametroId) {
            </div>
          </div>
         </div>`;
- }
+}

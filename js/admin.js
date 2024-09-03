@@ -1,8 +1,6 @@
 import Producto from "./classProducto.js";
 import { validarCaracteres, validarNumber } from "./validaciones.js";
-//logica del CRUD
-//necesito crear una clase, archivo por cada clase
-//aqui implemento en new, crea el objeto
+
 const modalProducto = new bootstrap.Modal(document.getElementById("modalAdmi"));
 const btnNuevo = document.getElementById("btnNuevo");
 const crear = document.getElementById("Form");
@@ -17,22 +15,17 @@ const imagen = document.getElementById("imagen");
 const categoria = document.getElementById("categoria");
 
 let estoyCreando = true;
-//crea el array
+
 const listaProductos =
   JSON.parse(localStorage.getItem("ListaProductosKey")) || [];
 
-//funciones como abrir el modal desde js y no desde el data-bs-toggle
 const MostrarModal = () => {
   modalProducto.show();
 };
-//para validar
-
-//Debo validar
 
 const crearProducto = () => {
   estoyCreando = true;
 
-  //validar form
   if (
     validarCaracteres(nombre, 3, 30) &&
     validarCaracteres(descripcion, 3, 30) &&
@@ -50,23 +43,20 @@ const crearProducto = () => {
       imagen.value,
       categoria.value
     );
-    //push del array al nuevo contacto
+
     listaProductos.push(nuevoProducto);
-    console.log(listaProductos);
+
     limpiarFormulario();
-    //Guardar en el LocalStorage
+
     guardarEnLocalStorage();
-    //Mostrar una fila agregada
+
     dibujarFila(nuevoProducto);
   } else {
     return false;
   }
-  //julian hay q validar el form con un archivo js
-  //guardar objeto en array y guardar el array en el localstorage
-  //acceder al value y pasarlo al contacto usando los inputs
 };
 
-let indiceProductoEditar = null; // Variable global para almacenar el índice del producto a editar
+let indiceProductoEditar = null;
 
 window.prepararEditarProducto = (id) => {
   estoyCreando = false;
@@ -98,8 +88,8 @@ const modificarProducto = () => {
 
     guardarEnLocalStorage();
     limpiarFormulario();
-    tabla.innerHTML = ``; // Limpia la tabla antes de volver a cargarla
-    cargaInicial(); // Recarga la tabla para reflejar los cambios
+    tabla.innerHTML = ``;
+    cargaInicial();
   }
 };
 
@@ -179,13 +169,10 @@ window.borrarProducto = (id) => {
   });
 };
 
-//logica crud
 btnNuevo.addEventListener("click", MostrarModal);
 crear.addEventListener("submit", administrarProducto);
 
 cargaInicial();
-
-// funcion ver para redireccionar pagina cocina
 
 window.verDetalle = (categoria) => {
   let url = "";
