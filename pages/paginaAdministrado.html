@@ -50,7 +50,7 @@
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="../index.html"
+                  href="./paginaPrincipalSecundaria.html"
                   >Inicio</a
                 >
               </li>
@@ -59,7 +59,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./paginaAdministrado.html"
-                  >Administrado</a
+                  >Administrador</a
                 >
               </li>
               <li class="nav-item dropdown">
@@ -112,17 +112,14 @@
                 </ul>
               </li>
             </ul>
-
             <div class="me-3">
-              <a
-                class="btn btn-outline-info rounded-pill acceso-usuario"
-                href="./pages/login.html"
-                data-bs-toggle="modal"
-                data-bs-target="#modalIniciarSesion"
+              <button
+                class="btn btn-outline-danger rounded-pill acceso-usuario"
+                id="cerrarSesion"
               >
                 <i class="bi bi-person"></i>
-                <span>Iniciar Sesion</span>
-              </a>
+                <span>Cerrar Sesion</span>
+              </button>
             </div>
           </div>
         </div>
@@ -332,6 +329,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/cerrarSesion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
     <script src="../js/admin.js" type="module"></script>
     <script src="../js/validaciones.js"></script>
