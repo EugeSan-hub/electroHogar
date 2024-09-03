@@ -22,6 +22,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/style.css" />
 
     <title>Categoria de Cocinas</title>
@@ -30,27 +34,30 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="#">ElectroHogar</a>
+          <a class="navbar-brand" href="../index.html">ElectroHogar</a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#navbarElectro"
+            aria-controls="navbarElectro"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarElectro">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
+                <a class="nav-link" href="./nosotros.html">Nosotros</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -63,24 +70,34 @@
                   Productos
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Celulares</a></li>
-                  <li><a class="dropdown-item" href="#">Televisores</a></li>
-                  <li><a class="dropdown-item" href="#">Heladeras</a></li>
-                  <li><a class="dropdown-item" href="#">Computadoras</a></li>
-                  <li><a class="dropdown-item" href="#">Cocinas</a></li>
-                  <li><a class="dropdown-item" href="#">Heladeras</a></li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaTv.html"
+                      >Televisores</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaHeladeras.html"
+                      >Heladeras</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaCocinas.html "
+                      >Cocinas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaLavarropas.html "
+                      >lavarropas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./Error404.html"
+                      >Computadoras</a
+                    >
+                  </li>
                 </ul>
               </li>
             </ul>
-            <div class="me-3">
-              <a
-                class="btn btn-outline-info rounded-pill acceso-usuario"
-                href="./pages/login.html"
-              >
-                <i class="bi bi-person"></i>
-                <span>Iniciar Sesion</span>
-              </a>
-            </div>
           </div>
         </div>
       </nav>
@@ -89,18 +106,16 @@
     <main class="bg-primary-subtle">
       <section class="container-fluid py-5 mb-4">
         <h2 class="text-center py-3">Categoria de Cocinas</h2>
+        <article class="container py-3 my-3">
+          <a href=""
+            ><img
+              src="../img/categoriasHeladeras/banners-interior.png"
+              alt="banner"
+              class="img-fluid"
+            />
+          </a>
+        </article>
       </section>
-
-      <article class="container py-3 my-3">
-        <a href=""
-          ><img
-            src="../img/categoriasHeladeras/banners-interior.png"
-            alt="banner"
-            class="img-fluid"
-          />
-        </a>
-      </article>
-
       <section class="container-fluid py-4 my-4">
         <div class="row">
           <section class="col-12 col-md-3 ps-md-4 my-3 py-3">
@@ -114,8 +129,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
+                    value="Orbis"
+                    id="checkOrbis"
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     Orbis
@@ -125,8 +140,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
+                    value="Escorial"
+                    id="checkEscorial"
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     Escorial
@@ -136,8 +151,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
+                    value="Whirlpool"
+                    id="checkWhirlpool"
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     Whirlpool
@@ -147,8 +162,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
+                    value="Volcan"
+                    id="checkVolcan"
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     Volcan
@@ -158,17 +173,17 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
+                    value="Philco"
+                    id="checkPhilco"
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     Philco
                   </label>
                 </div>
-               
+
                 <p><a href="">Ver mas</a></p>
               </article>
-            
+
               <article class="col-3 col-md-12 py-2 my-2">
                 <h5>Tipo</h5>
                 <div class="form-check">
@@ -234,11 +249,15 @@
           </section>
 
           <section
-            class="container container-md-fluid col-10 col-md-9 my-3 py-3"
+            class="container container-md-fluid col-10 col-md-8 mx-3 py-3"
           >
-            <div class="row justify-content-center justify-content-md-evenly">
+            <section
+              class="row justify-content-center justify-content-md-evenly"
+              id="contenedorCard"
+            >
               <article
                 class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+                id="contenedorCard"
               >
                 <a href="./categoriaCocinas.html"
                   ><img
@@ -334,8 +353,8 @@
                 <p class="text-center mx-2 my-3 py-2">
                   <span
                     >Cocina Volcan 87644v 4 Hornallas <br />
-                   Blanca Multigas GN/glp </span
-                  >
+                    Blanca Multigas GN/glp
+                  </span>
                 </p>
                 <p class="fw-bold text-center">$548.000</p>
               </article>
@@ -385,8 +404,8 @@
                 <p class="text-center mx-2 my-3 py-2">
                   <span
                     >Cocina WhirlpoolWFX57DI con<br />
-                    puerta con visor color inox </span
-                  >
+                    puerta con visor color inox
+                  </span>
                 </p>
                 <p class="fw-bold text-center">$918.092</p>
               </article>
@@ -407,55 +426,55 @@
                 </p>
                 <p class="fw-bold text-center">$1.121.926</p>
               </article>
-            </div>
+            </section>
           </section>
         </div>
       </section>
     </main>
-
-    <footer class="bg-dark text-light py-3 border-top text-center mt-3 py-2">
+    <footer class="bg-dark text-light py-3 border-top text-center mt-3 pt-3">
       <section class="container">
         <div class="row">
-          <div class="col-12 col-md-4 pt-2 ">
-            <ul class="text-center pe-4 list-unstyled ">
-              <li class="fs-4">Acerca de ElectroHogar</li>
-              <li>QUIENES SOMOS</li>
-              <li>CARRERAS</li>
-              <li>NUESTRAS RESPONSABILIDADES</li>
-              <li>iNVERSIONISTAS</li>
+          <div class="col-12 col-md-4 py-3">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-5">Acerca de ElectroHogar</li>
+              <li>Quienes somos</li>
+              <li>Carreras</li>
+              <li>Nuestras responsabilidades</li>
+              <li>Inversionistas</li>
             </ul>
           </div>
-          <div class="col-12 col-md-4 pt-2 ">
+          <div class="col-12 col-md-4 py-3">
             <ul class="text-center pe-4 list-unstyled">
-              <li class="fs-4">Tiendas y Servicios</li>
-              <li>ENCUENTRA UNA TIENDA</li>
-              <li>DIRECTORIO DE TIENDAS</li>
-              <li>DIRECTORIO DE MARCAS</li>
-              <li>SERVICIO DE TIENDAS</li>
+              <li class="fs-5">Tiendas y Servicios</li>
+              <li>Encuentra una tienda</li>
+              <li>Directorio de tiendas</li>
+              <li>Directorio de marcas</li>
+              <li>Servicio de tienda</li>
             </ul>
           </div>
-          <div class="col-12 col-md-4 pt-2 ">
+          <div class="col-12 col-md-4 py-2">
             <ul class="text-center pe-4 list-unstyled">
-              <li class="fs-4">Servicio Al Cliente</li>
-              <li>PREGUNTAS FRECUENTES</li>
-              <li>REEMBOLSOS</li>
-              <li>DEVOLUCIONES Y CAMBIOS</li>
-              <li>RECIBO, ENVIO Y ENTREGA</li>
+              <li class="fs-5">Servicio Al Cliente</li>
+              <li>Preguntas frecuentes</li>
+              <li>Reembolsos</li>
+              <li>Devoluciones y cambios</li>
+              <li>Recibos, envios y entregas</li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="container border-top mt-2 d-flex justify-content-center pt-3">
-          <div class="fs-1">
-            <a href="" class="text-light"><i class="bi bi-facebook"></i></a>
-            <a href="" class="text-light"><i class="bi bi-instagram mx-2"></i></a>
-            <a href="" class="text-light"><i class="bi bi-whatsapp mx-2"></i></a>
-            </i>
-            <a href="" class="text-light"><i class="bi bi-twitter-x"></i></a>
-          </div>
+      <section
+        class="container border-top mt-2 d-flex justify-content-center pt-3"
+      >
+        <div class="fs-4">
+          <a href="" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="" class="text-light"><i class="bi bi-instagram mx-2"></i></a>
+          <a href="" class="text-light"><i class="bi bi-whatsapp mx-2"></i></a>
+          <a href="" class="text-light"><i class="bi bi-twitter-x"></i></a>
+        </div>
       </section>
-      <section class="border-top text-center mt-3 py-2 pt-4">
-        <h3 class="lead">@Todos los derechos reservados</h3>
+      <section class="border-top text-center my-3 py-3">
+        <h4 class="fs-5">@Todos los derechos reservados</h4>
       </section>
     </footer>
     <script
@@ -463,5 +482,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/filtro.js"></script>
   </body>
 </html>
