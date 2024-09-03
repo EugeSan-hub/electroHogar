@@ -2,7 +2,7 @@
 Proyecto fin de modulo 2. Realizamos una e-commerce de electrodomésticos. 
 
 ## Demo 💻
-Mira nuestro proyecto aqui: (link de netlify)
+Mira nuestro proyecto aqui: (https://electrohogarmod2.netlify.app/pages/paginaprincipalsecundaria)
 
 ## Herraminetas Utilizadas ⚙️ 🔧
 
@@ -12,9 +12,8 @@ Mira nuestro proyecto aqui: (link de netlify)
 - [GitHub](https://github.com/)
 
 ## Cloná!
-Descarga aquí el código 
+` git clone (https://github.com/EugeSan-hub/electroHogar.git)
 
-` git clone (link codigo)
 ## Autores 👨‍💻👩🏽‍💻
 - Julian Garay 
 - Julieta Wunsche
