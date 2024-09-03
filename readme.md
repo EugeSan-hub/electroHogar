@@ -1,23 +1,24 @@
-Electro Hogar 🔌🏠
-Proyecto fin de modulo 2. Realizamos una e-commerce de electrodomésticos.
+# Electro Hogar  🔌🏠
+Proyecto fin de modulo 2. Realizamos una e-commerce de electrodomésticos. 
 
-Demo 💻
+## Demo 💻
 Mira nuestro proyecto aqui: (link de netlify)
 
-Herraminetas Utilizadas ⚙️ 🔧
-Bootstrap v5.3
-JavaScript
-Sweet Alert
-GitHub
-Cloná!
-Descarga aquí el código
+## Herraminetas Utilizadas ⚙️ 🔧
 
-` git clone ([link codigo](https://github.com/EugeSan-hub/electroHogar))
+- [Bootstrap v5.3](https://getbootstrap.com/)
+- JavaScript
+- [Sweet Alert](https://sweetalert2.github.io/)
+- [GitHub](https://github.com/)
 
-Autores 👨‍💻👩🏽‍💻
-Julian Garay
-Julieta Wunsche
-Victor Augusto Verón
-Facundo Martinez
-Tomas Herrero Santamarina
-Eugenia Sansierra
+## Cloná!
+Descarga aquí el código 
+
+` git clone (link codigo)
+## Autores 👨‍💻👩🏽‍💻
+- Julian Garay 
+- Julieta Wunsche
+- Victor Augusto Verón 
+- Facundo Martinez
+- Tomas Herrero Santamarina 
+- Eugenia Sansierra 
