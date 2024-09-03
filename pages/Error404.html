@@ -1,138 +1,262 @@
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <meta name="desription" content="Tienda online de electrodomésticos en Argentina" />
-    <meta name="keywords" content="Televisores, celulares, heladeras, microondas, electrodomésticos" />
-    <meta name="author"
-        content="Tomas Herrero Santamarina, Julieta Wunsche, Julian Garay, Eugenia Maria Sansierra De Ezcurra, Facundo Martinez Rodriguez, Victor Augusto Veron " />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <meta
+      name="desription"
+      content="Tienda online de electrodomésticos en Argentina"
+    />
+    <meta
+      name="keywords"
+      content="Televisores, celulares, heladeras, microondas, electrodomésticos"
+    />
+    <meta
+      name="author"
+      content="Tomas Herrero Santamarina, Julieta Wunsche, Julian Garay, Eugenia Maria Sansierra De Ezcurra, Facundo Martinez Rodriguez, Victor Augusto Veron "
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>ElectroHogar</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
-                <a class="navbar-brand" href="#">ElectroHogar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Nosotros</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Celulares</a></li>
-                                <li><a class="dropdown-item" href="#">Televisores</a></li>
-                                <li><a class="dropdown-item" href="#">Heladeras</a></li>
-                                <li><a class="dropdown-item" href="#">Computadoras</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                    <div class="me-3">
-                        <a class="btn btn-outline-info rounded-pill acceso-usuario" href="./pages/login.html">
-                            <i class="bi bi-person"></i>
-                            <span>Iniciar Sesion</span>
-                        </a>
-                    </div>
-                </div>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ElectroHogar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Productos
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./Error404.html"
+                      >Celulares</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaTv.html"
+                      >Televisores</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaHeladeras.html"
+                      >Heladeras</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./Error404.html"
+                      >Computadoras</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaCocinas.html "
+                      >Cocinas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaHeladeras.html"
+                      >Heladeras</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="me-3">
+              <a
+                class="btn btn-outline-info rounded-pill acceso-usuario"
+                href="./pages/login.html"
+                data-bs-toggle="modal"
+                data-bs-target="#modalIniciarSesion"
+              >
+                <i class="bi bi-person"></i>
+                <span>Iniciar Sesion</span>
+              </a>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section>
-            <div class="container">
-                <div class="row">
-
-                    <div>
-                        <h1 class="mt-3 mb-3 text-info text-center">  Ups! Página no encontrada</h1>
-                        <div>
-                            <img src="./img/ups-error-404-ilustracion-concepto-robot-roto_114360-5529.jpg" alt="Página no encontrada" class="img-fluid pagina-404-img">
-                        </div>
-                        <div class="contenido-404">
-
-                            <p class=" mt-5 mb-3 text-center text-info">La página que estas buscando no esta disponible</p>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-primary mb-3" href="#" role="button">Inicio</a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-            </div>
-
-        </section>
-    </main>
-    <footer class="bg-dark text-light py-3 border-top text-center mt-3 py-2">
-        <section class="container">
+      <section>
+        <div class="container">
           <div class="row">
-            <div class="col-12 col-md-4 pt-2 ">
-              <ul class="text-center pe-4 list-unstyled ">
-                <li class="fs-4">Acerca de ElectroHogar</li>
-                <li>QUIENES SOMOS</li>
-                <li>CARRERAS</li>
-                <li>NUESTRAS RESPONSABILIDADES</li>
-                <li>iNVERSIONISTAS</li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-4 pt-2 ">
-              <ul class="text-center pe-4 list-unstyled">
-                <li class="fs-4">Tiendas y Servicios</li>
-                <li>ENCUENTRA UNA TIENDA</li>
-                <li>DIRECTORIO DE TIENDAS</li>
-                <li>DIRECTORIO DE MARCAS</li>
-                <li>SERVICIO DE TIENDAS</li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-4 pt-2 ">
-              <ul class="text-center pe-4 list-unstyled">
-                <li class="fs-4">Servicio Al Cliente</li>
-                <li>PREGUNTAS FRECUENTES</li>
-                <li>REEMBOLSOS</li>
-                <li>DEVOLUCIONES Y CAMBIOS</li>
-                <li>RECIBO, ENVIO Y ENTREGA</li>
-              </ul>
+            <div>
+              <h1 class="mt-3 mb-3 text-info text-center">
+                Ups! Página no encontrada
+              </h1>
+              <div>
+                <img
+                  src="../img/ups-error-404-ilustracion-concepto-robot-roto_114360-5529.jpg"
+                  alt="Página no encontrada"
+                  class="img-fluid pagina-404-img"
+                />
+              </div>
+              <div class="contenido-404">
+                <p class="mt-5 mb-3 text-center text-info">
+                  La página que estas buscando no esta disponible
+                </p>
+                <div class="d-flex justify-content-center">
+                  <a class="btn btn-primary mb-3" href="#" role="button"
+                    >Inicio</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-        </section>
-        <section class="container border-top mt-2 d-flex justify-content-center pt-3">
-            <div class="fs-1">
-              <a href="" class="text-light"><i class="bi bi-facebook"></i></a>
-              <a href="" class="text-light"><i class="bi bi-instagram mx-2"></i></a>
-              <a href="" class="text-light"><i class="bi bi-whatsapp mx-2"></i></a>
-              </i>
-              <a href="" class="text-light"><i class="bi bi-twitter-x"></i></a>
-            </div>
-        </section>
-        <section class="border-top text-center mt-3 py-2 pt-4">
-          <h3 class="lead">@Todos los derechos reservados</h3>
-        </section>
-      </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
-
+        </div>
+      </section>
+    </main>
+    <div class="modal" id="modalIniciarSesion" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-3 fw-bold">Iniciar Sesión</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formUsuario">
+              <div class="mb-3">
+                <label for="nombreUsuario" class="form-label fs-5 fw-light"
+                  >Usuario</label
+                >
+                <input
+                  type="text"
+                  class="form-control fs-6 fst-italic"
+                  id="nombreUsuario"
+                  minlength="3"
+                  maxlength="30"
+                  placeholder="Nombre de Usuario"
+                  required
+                />
+              </div>
+              <div class="my-3 py-2">
+                <label for="contraseña" class="form-label fs-5 fw-light"
+                  >Contraseña</label
+                >
+                <input
+                  type="password"
+                  class="form-control fs-6 fst-italic"
+                  minlength="3"
+                  maxlength="12"
+                  id="contraseña"
+                  placeholder="Ingrese su contraseña"
+                  required
+                />
+              </div>
+              <div class="d-flex flex-column justify-content-between my-2 pt-2">
+                <button type="submit" class="btn btn-primary my-2 py-2">
+                  Iniciar Sesión
+                </button>
+                <a href="../pages/Error404.html"
+                  ><p>¿Olvidaste tu contraseña?</p></a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-light py-3 border-top text-center mt-3 pt-3">
+      <section class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 py-3">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-5">Acerca de ElectroHogar</li>
+              <li>Quienes somos</li>
+              <li>Carreras</li>
+              <li>Nuestras responsabilidades</li>
+              <li>Inversionistas</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 py-3">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-5">Tiendas y Servicios</li>
+              <li>Encuentra una tienda</li>
+              <li>Directorio de tiendas</li>
+              <li>Directorio de marcas</li>
+              <li>Servicio de tienda</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 py-2">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-5">Servicio Al Cliente</li>
+              <li>Preguntas frecuentes</li>
+              <li>Reembolsos</li>
+              <li>Devoluciones y cambios</li>
+              <li>Recibos, envios y entregas</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        class="container border-top mt-2 d-flex justify-content-center pt-3"
+      >
+        <div class="fs-4">
+          <a href="" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="" class="text-light"><i class="bi bi-instagram mx-2"></i></a>
+          <a href="" class="text-light"><i class="bi bi-whatsapp mx-2"></i></a>
+          <a href="" class="text-light"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </section>
+      <section class="border-top text-center my-3 py-3">
+        <h4 class="fs-5">@Todos los derechos reservados</h4>
+      </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
