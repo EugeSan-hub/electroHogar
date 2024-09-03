@@ -2,7 +2,7 @@
 Proyecto fin de modulo 2. Realizamos una e-commerce de electrodomésticos. 
 
 ## Demo 💻
-Mira nuestro proyecto aqui: (https://electrohogarmod2.netlify.app/pages/paginaprincipalsecundaria)
+Mira nuestro proyecto aqui: (https://electrohogarmod2.netlify.app/)
 
 ## Herraminetas Utilizadas ⚙️ 🔧
 
