@@ -16,7 +16,7 @@ const productosCategorias = listaProductos.filter(
 
 const cargaInicial = () => {
   if (seccionIndex) {
-    productosCategorias.slice(0,4).map((producto) => {
+    productosCategorias.map((producto) => {
       seccionIndex.innerHTML += `
         <div class="col-sm-12 col-md-6 col-lg-3 ">
           <div class="card mt-4">
