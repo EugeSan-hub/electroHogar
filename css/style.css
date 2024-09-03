@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+main {
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.imagenCarousel {
+  height: 200px;
+  object-fit: cover;
+}
+
+@media all and (min-width: 992px) {
+  .imagenCarousel {
+    height: 400px;
+    object-fit: cover;
+    object-position: 50% 30%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .imagenCarousel {
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 30%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bannerNosotros {
+  object-fit: cover;
+  height: 300px;
+}
+
+.cardNosotros {
+  border: none;
+  max-width: 250px;
+  margin: auto;
+  background-color: #212529;
+}
+
+.imgNosotros {
+  border-radius: 100%;
+  filter: grayscale(30%);
+}
+
+.cardNosotros:hover {
+  color: rgb(39, 46, 146);
+  transition: all 3ms;
+}
+
+@media (max-width: 767px) {
+  .h1Nosotros {
+    font-size: 1.5rem; /* Ajusta el tamaño del texto en móviles */
+  }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pagina-404-img {
+  width: 100%;
+  border-radius: 3%;
+  height: auto;
+}
+@media (max-width: 768px) {
+}
+
+ul {
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+  color: rgb(206, 203, 203);
+}
+
+li a:hover {
+  color: rgb(163, 161, 161);
+  transition: 305ms;
+}
+
+.spam {
+  color: white;
+}

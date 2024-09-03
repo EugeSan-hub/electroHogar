@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="desription" content="Pagina de electrodomesticos" />
+    <meta
+      name="keywodes"
+      cont="Televisores, celulares, heladeras, microondas, electrodomesticos"
+    />
+    <meta
+      name="author"
+      content="Tomas Herrero Santamarina, Julieta Wunsche, Julian Garay, Eugenia Maria Sansierra De Ezcurra, Facundo Martinez Rodriguez, Victor Augusto Veron "
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Categoria de Heladeras</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ElectroHogar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarElectro"
+            aria-controls="navbarElectro"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarElectro">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Productos
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./categoriaTv.html"
+                      >Televisores</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaHeladeras.html"
+                      >Heladeras</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaCocinas.html "
+                      >Cocinas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaLavarropas.html "
+                      >lavarropas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./Error404.html"
+                      >Computadoras</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="bg-primary-subtle">
+      <section class="container-fluid py-5 mb-4">
+        <h2 class="text-center py-3">Categoria de Heladeras</h2>
+      </section>
+
+      <article class="container py-3 my-3">
+        <a href=""
+          ><img
+            src="../img/categoriasHeladeras/banners-interior.png"
+            alt="banner"
+            class="img-fluid"
+          />
+        </a>
+      </article>
+
+      <section class="container-fluid py-4 my-4">
+        <div class="row">
+          <section class="col-12 col-md-3 ps-md-4 my-3 py-3">
+            <article class="mb-3">
+              <h4>Filtros</h4>
+            </article>
+            <div class="row">
+              <article class="col-3 col-md-12 py-2 my-2">
+                <h5>Marcas</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Samsung"
+                    id="checkSamsung"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Samsung
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Dream"
+                    id="checkDream"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Dream
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Whirlpool"
+                    id="checkWhirlpool"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Whirlpool
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Gafa"
+                    id="checkGafa"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Gafa
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Koh-i-nor"
+                    id="checkKoh-i-nor"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Koh-i-nor
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Hisense"
+                    id="checkHisense"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Hisense
+                  </label>
+                </div>
+                <p><a href="">Ver mas</a></p>
+              </article>
+              <article class="col-3 col-md-12 py-2 my-2">
+                <h5>Dispenser</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Si
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    No
+                  </label>
+                </div>
+                <p><a href="">Ver mas</a></p>
+              </article>
+              <article class="col-3 col-md-12 py-2 my-2">
+                <h5>Inverter</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Si
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    No
+                  </label>
+                </div>
+              </article>
+              <article class="col-3 col-md-12 py-2 my-2">
+                <h5>Eficiencia Energetica</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    A
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    A++
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    B
+                  </label>
+                </div>
+              </article>
+              <article class="col-3 col-md-12 py-2 my-2">
+                <h5>Entrega</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Domicilio
+                  </label>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section
+            class="container container-md-fluid col-10 col-md-9 my-3 py-3"
+          >
+            <div
+              class="row justify-content-center justify-content-md-evenly"
+              id="contenedorCard"
+            >
+              <article
+                class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+              >
+                <a href="./categoriaHeladeras.html"
+                  ><img
+                    src="../img/categoriasHeladeras/h1.jpg"
+                    alt="heladera Drean"
+                    class="img-fluid rounded-2"
+                /></a>
+                <p class="text-center mt-3 py-2">
+                  <span
+                    >Heladera Cíclica Drean HDR400F00S<br />
+                    397 Lt Gris</span
+                  >
+                </p>
+                <p class="fw-bold text-center">$959.999</p>
+              </article>
+              <article
+                class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+              >
+                <a href=""
+                  ><img
+                    src="../img/categoriasHeladeras/h3.jpg"
+                    alt="heladera Sigma"
+                    class="img-fluid rounded-2"
+                /></a>
+                <p class="text-center mt-3 py-2">
+                  <span
+                    >Heladera Cíclica Sigma<br />
+                    2F1200Pa 239Lts Plata</span
+                  >
+                </p>
+                <p class="fw-bold text-center">$599.999</p>
+              </article>
+              <article
+                class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+              >
+                <a href=""
+                  ><img
+                    src="../img/categoriasHeladeras/h2.jpg"
+                    alt="Heladera Hisense"
+                    class="img-fluid rounded-2"
+                /></a>
+                <p class="text-center mt-3 py-2">
+                  <span
+                    >Heladera Hisense No Frost<br />
+                    91RD49WRB 380L</span
+                  >
+                </p>
+                <p class="fw-bold text-center">$1.049.999</p>
+              </article>
+              <article
+                class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+              >
+                <a href=""
+                  ><img
+                    src="../img/categoriasHeladeras/h4.jpg"
+                    alt="Heladera Neba"
+                    class="img-fluid rounded-2"
+                /></a>
+                <p class="text-center mt-3 py-2">
+                  <span
+                    >Heladera bajo mesada con freezer<br />
+                    Neba A128</span
+                  >
+                </p>
+                <p class="fw-bold text-center">$549.999</p>
+              </article>
+              <article
+                class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+              >
+                <a href=""
+                  ><img
+                    src="../img/categoriasHeladeras/h5.png"
+                    alt="heladera Drean"
+                    class="img-fluid rounded-2"
+                /></a>
+                <p class="text-center mt-3 py-2">
+                  <span
+                    >Heladera Cíclica Drean 277Lts<br />
+                    HDR280F00B Blanco</span
+                  >
+                </p>
+                <p class="fw-bold text-center">$659.999</p>
+              </article>
+              <article
+                class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+              >
+                <a href=""
+                  ><img
+                    src="../img/categoriasHeladeras/h7.jpg"
+                    alt="Heladera Hisense"
+                    class="img-fluid rounded-2"
+                /></a>
+                <p class="text-center mx-2 my-3 py-2">
+                  <span
+                    >Heladera Side by Side Hisense <br />
+                    RC-67WSG 518L</span
+                  >
+                </p>
+                <p class="fw-bold text-center">$1.999.999</p>
+              </article>
+              <article
+                class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+              >
+                <a href=""
+                  ><img
+                    src="../img/categoriasHeladeras/h8.jpg"
+                    alt="PlayStation"
+                    class="img-fluid rounded-2"
+                /></a>
+                <p class="text-center mx-2 my-3 py-2">
+                  <span
+                    >Heladera Bajo Mesada Retro 90<br />
+                    L Siam 91HSI-BM090CR Crema</span
+                  >
+                </p>
+                <p class="fw-bold text-center">$359.999</p>
+              </article>
+              <article
+                class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+              >
+                <a href=""
+                  ><img
+                    src="../img/categoriasHeladeras/h9.jpg"
+                    alt="heladera Whirlpool"
+                    class="img-fluid rounded-2"
+                /></a>
+                <p class="text-center mx-2 my-3 py-2">
+                  <span
+                    >Heladera No Frost Whirlpool<br />
+                    WRE85AKDIM 625Lt</span
+                  >
+                </p>
+                <p class="fw-bold text-center">$2.999.999</p>
+              </article>
+              <article
+                class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+              >
+                <a href=""
+                  ><img
+                    src="../img/categoriasHeladeras/h10.jpg"
+                    alt="Television"
+                    class="img-fluid rounded-2"
+                /></a>
+                <p class="text-center mx-2 my-3 py-2">
+                  <span
+                    >Heladera Bajo Mesada<br />
+                    Whirlpool WRA12B 120Lt Blanca</span
+                  >
+                </p>
+                <p class="fw-bold text-center">$699.999</p>
+              </article>
+              <article
+                class="col-10 col-md-5 col-lg-3 mx-2 my-3 border border-2 rounded-3 p-3"
+              >
+                <a href=""
+                  ><img
+                    src="../img/categoriasHeladeras/95fa5cdcb91ced85656070a5b9b9.jpg"
+                    alt="heladera Siam"
+                    class="img-fluid rounded-2"
+                /></a>
+                <p class="text-center mx-2 my-3 py-2">
+                  <span
+                    >Heladera Cíclica GAFA<br />
+                    HGF368AFP 330Lts Plata</span
+                  >
+                </p>
+                <p class="fw-bold text-center">$799.999</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-light py-3 border-top text-center mt-3 pt-3">
+      <section class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 py-3">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-5">Acerca de ElectroHogar</li>
+              <li>Quienes somos</li>
+              <li>Carreras</li>
+              <li>Nuestras responsabilidades</li>
+              <li>Inversionistas</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 py-3">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-5">Tiendas y Servicios</li>
+              <li>Encuentra una tienda</li>
+              <li>Directorio de tiendas</li>
+              <li>Directorio de marcas</li>
+              <li>Servicio de tienda</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 py-2">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-5">Servicio Al Cliente</li>
+              <li>Preguntas frecuentes</li>
+              <li>Reembolsos</li>
+              <li>Devoluciones y cambios</li>
+              <li>Recibos, envios y entregas</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        class="container border-top mt-2 d-flex justify-content-center pt-3"
+      >
+        <div class="fs-4">
+          <a href="" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="" class="text-light"><i class="bi bi-instagram mx-2"></i></a>
+          <a href="" class="text-light"><i class="bi bi-whatsapp mx-2"></i></a>
+          <a href="" class="text-light"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </section>
+      <section class="border-top text-center my-3 py-3">
+        <h4 class="fs-5">@Todos los derechos reservados</h4>
+      </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/filtro.js"></script>
+  </body>
+</html>

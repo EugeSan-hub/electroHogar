@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="desription" content="Pagina de electrodomesticos" />
+    <meta
+      name="keywodes"
+      cont="Televisores, celulares, heladeras, microondas, electrodomesticos"
+    />
+    <meta
+      name="author"
+      content="Tomas Herrero Santamarina, Julieta Wunsche, Julian Garay, Eugenia Maria Sansierra De Ezcurra, Facundo Martinez Rodriguez, Victor Augusto Veron "
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
+    "
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>ElectroHogar</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="./paginaPrincipalSecundaria.html"
+            >ElectroHogar</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarElectro"
+            aria-controls="navbarElectro"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarElectro">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./paginaPrincipalSecundaria.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./paginaPrincipalSecundaria.html"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./paginaAdministrado.html"
+                  >Administrador</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Productos
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./categoriaTv.html"
+                      >Televisores</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaHeladeras.html"
+                      >Heladeras</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaCocinas.html "
+                      >Cocinas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./categoriaLavarropas.html "
+                      >lavarropas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./Error404.html"
+                      >Computadoras</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="me-3">
+              <button
+                class="btn btn-outline-danger rounded-pill acceso-usuario"
+                id="cerrarSesion"
+              >
+                <i class="bi bi-person"></i>
+                <span>Cerrar Sesion</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="bg-primary-subtle">
+      <section class="container my-4 py-2">
+        <h2 class="text-start my-4 py-2">Administrador</h2>
+      </section>
+
+      <section class="container my-4 py-3">
+        <div class="d-flex justify-content-between my-3 py-2">
+          <h4>Tabla de Productos</h4>
+          <button class="btn btn-primary" id="btnNuevo">
+            Agregar Nuevo Producto
+          </button>
+        </div>
+        <div class="table-responsive my-3">
+          <table class="table table-striped">
+            <thead class="table-light">
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Marca</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-light py-3 border-top text-center mt-3 pt-3">
+      <section class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 py-3">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-5">Acerca de ElectroHogar</li>
+              <li>Quienes somos</li>
+              <li>Carreras</li>
+              <li>Nuestras responsabilidades</li>
+              <li>Inversionistas</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 py-3">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-5">Tiendas y Servicios</li>
+              <li>Encuentra una tienda</li>
+              <li>Directorio de tiendas</li>
+              <li>Directorio de marcas</li>
+              <li>Servicio de tienda</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 py-2">
+            <ul class="text-center pe-4 list-unstyled">
+              <li class="fs-5">Servicio Al Cliente</li>
+              <li>Preguntas frecuentes</li>
+              <li>Reembolsos</li>
+              <li>Devoluciones y cambios</li>
+              <li>Recibos, envios y entregas</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        class="container border-top mt-2 d-flex justify-content-center pt-3"
+      >
+        <div class="fs-4">
+          <a href="" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="" class="text-light"><i class="bi bi-instagram mx-2"></i></a>
+          <a href="" class="text-light"><i class="bi bi-whatsapp mx-2"></i></a>
+          <a href="" class="text-light"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </section>
+      <section class="border-top text-center my-3 py-3">
+        <h4 class="fs-5">@Todos los derechos reservados</h4>
+      </section>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="modalAdmi"
+      tabindex="-1"
+      aria-labelledby="modalAdmiLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5 text-center" id="modalAdmiLabel">
+              Agregar producto
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="Form">
+              <div class="mb-3">
+                <label for="Nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" />
+                <div class="invalid-feedback">
+                  El nombre es obligatorio, ingrese entre 2 y 30 caracteres.
+                </div>
+                <div class="valid-feedback">Datos correctos</div>
+              </div>
+              <div class="mb-3">
+                <label for="Descripcion" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" id="descripcion" />
+                <div class="invalid-feedback">
+                  La descripcion es obligatoria, ingrese entre 2 y 30
+                  caracteres.
+                </div>
+                <div class="valid-feedback">Datos correctos</div>
+              </div>
+              <div class="mb-3">
+                <label for="Marca" class="form-label">Marca</label>
+                <input type="text" class="form-control" id="marca" />
+                <div class="invalid-feedback">
+                  La marca es obligatoria, ingrese entre 2 y 30 caracteres.
+                </div>
+                <div class="valid-feedback">Datos correctos</div>
+              </div>
+              <div class="mb-3">
+                <label for="Cantidad" class="form-label">Cantidad</label>
+                <input type="number" class="form-control" id="cantidad" />
+                <div class="invalid-feedback">
+                  La cantidad es obligatoria y debe ser mayor a 1.
+                </div>
+                <div class="valid-feedback">Datos correctos.</div>
+              </div>
+              <div class="mb-3">
+                <label for="Precio" class="form-label">Precio</label>
+                <input type="text" class="form-control" id="precio" />
+                <div class="invalid-feedback">
+                  El precio es obligatorio y debe ser mayor a 1.
+                </div>
+                <div class="valid-feedback">Datos correctos.</div>
+              </div>
+              <div class="mb-3">
+                <label for="imagen" class="form-label"
+                  >Imagen del producto</label
+                >
+                <input type="text" class="form-control" id="imagen" />
+              </div>
+              <div class="mb-3">
+                <label for="Categoria" class="form-label">Categoria</label>
+                <input type="text" class="form-control" id="categoria" />
+                <div class="invalid-feedback">
+                  La categoria es obligatoria, ingrese entre 2 y 30 caracteres
+                </div>
+                <div class="valid-feedback">Datos correctos</div>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/cerrarSesion.js"></script>
+    <script src="../js/admin.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
+    <script src="../js/validaciones.js"></script>
+  </body>
+</html>
