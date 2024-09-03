@@ -23,6 +23,7 @@ const MostrarModal = () => {
   modalProducto.show();
 };
 
+
 const crearProducto = () => {
   estoyCreando = true;
 
@@ -43,9 +44,7 @@ const crearProducto = () => {
       imagen.value,
       categoria.value
     );
-
     listaProductos.push(nuevoProducto);
-
     limpiarFormulario();
 
     guardarEnLocalStorage();
@@ -54,9 +53,10 @@ const crearProducto = () => {
   } else {
     return false;
   }
+
 };
 
-let indiceProductoEditar = null;
+let indiceProductoEditar = null; 
 
 window.prepararEditarProducto = (id) => {
   estoyCreando = false;
@@ -89,7 +89,7 @@ const modificarProducto = () => {
     guardarEnLocalStorage();
     limpiarFormulario();
     tabla.innerHTML = ``;
-    cargaInicial();
+    cargaInicial(); 
   }
 };
 
@@ -169,10 +169,12 @@ window.borrarProducto = (id) => {
   });
 };
 
+
 btnNuevo.addEventListener("click", MostrarModal);
 crear.addEventListener("submit", administrarProducto);
 
 cargaInicial();
+
 
 window.verDetalle = (categoria) => {
   let url = "";
