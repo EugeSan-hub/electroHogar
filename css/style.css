@@ -35,12 +35,11 @@ main {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "poppins";
 }
+
 .bannerNosotros {
   object-fit: cover;
-  height: 400px;
+  height: 300px;
 }
 
 .cardNosotros {
