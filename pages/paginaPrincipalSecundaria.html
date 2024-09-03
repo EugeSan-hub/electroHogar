@@ -609,7 +609,7 @@
           </div>
           <div class="modal-body">
             <form id="formLogin">
-              <div class="mb-3">
+              <div class="mb-3" id="adminUsuario">
                 <label for="usuario" class="form-label">Usuario</label>
                 <input
                   type="text"
@@ -618,7 +618,7 @@
                   placeholder="nombre de usuario"
                 />
               </div>
-              <div class="mb-3">
+              <div class="mb-3" id="adminContraseña">
                 <label for="contraseña" class="form-label">Contraseña</label>
                 <input
                   type="password"
@@ -627,10 +627,15 @@
                   placeholder="contraseña"
                 />
               </div>
-              <div>
-                <button type="submit" class="btn btn-primary w-100">
-                  Iniciar sesion
-                </button>
+              <div class="pt-2 mt-2">
+                <div class="d-flex flex-column justify-content-between">
+                  <button type="submit" class="btn btn-primary my-2 py-2">
+                    Iniciar Sesión
+                  </button>
+                  <a href="../pages/Error404.html"
+                    ><p>¿Olvidaste tu contraseña?</p></a
+                  >
+                </div>
               </div>
             </form>
           </div>

@@ -13,6 +13,8 @@ const iniciarSesion = (e) => {
   const usuario = document.getElementById("usuario").value;
   const contraseña = document.getElementById("contraseña").value;
 
+  console.log(adminUsuario,contraseña);
+
   if (usuario === adminUsuario && contraseña === adminContraseña) {
     window.location.href ="./pages/paginaAdministrado.html"
   } else {
